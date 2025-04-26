@@ -140,8 +140,32 @@ export default component$(() => {
     );
   });
 
-  useTask$(async () => {
-   
+  useTask$(async ({ track }) => {
+    const algorithmrefvalue = track(() => algorithmref.value);
+    const passwordrefvalue = track(() => password.value);
+
+    if (password.value.length > 0) {
+      await debouncedGenerateHash(
+        passwordrefvalue,
+        (pass) => {
+          password.value = pass;
+        },
+        algorithmrefvalue,
+        (hash) => {
+          hashref.value = hash;
+        },
+        (algorithm) => {
+          algorithmref.value = algorithm;
+        },
+        // (pass) => {
+        //   password.value = pass;
+        // },
+        (salt) => {
+          saltref.value = salt;
+        },
+        passlength.value
+      );
+    }
   });
   return (
     <>
