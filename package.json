@@ -26,7 +26,9 @@
   "devDependencies": {
     "@builder.io/qwik": "^1.13.0",
     "@builder.io/qwik-city": "^1.13.0",
+    "@types/bootstrap": "^5",
     "@types/eslint": "8.56.10",
+    "@types/lodash-es": "^4",
     "@types/node": "20.14.11",
     "@typescript-eslint/eslint-plugin": "7.16.1",
     "@typescript-eslint/parser": "7.16.1",
@@ -38,5 +40,9 @@
     "vite": "5.3.5",
     "vite-tsconfig-paths": "^4.2.1"
   },
-  "packageManager": "yarn@4.7.0+sha512.5a0afa1d4c1d844b3447ee3319633797bcd6385d9a44be07993ae52ff4facabccafb4af5dcd1c2f9a94ac113e5e9ff56f6130431905884414229e284e37bb7c9"
+  "packageManager": "yarn@4.7.0+sha512.5a0afa1d4c1d844b3447ee3319633797bcd6385d9a44be07993ae52ff4facabccafb4af5dcd1c2f9a94ac113e5e9ff56f6130431905884414229e284e37bb7c9",
+  "dependencies": {
+    "bootstrap": "^5.3.5",
+    "lodash-es": "^4.17.21"
+  }
 }

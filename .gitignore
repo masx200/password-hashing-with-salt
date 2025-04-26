@@ -3,7 +3,7 @@
 /lib
 /lib-types
 /server
-
+yarn.lock
 # Development
 node_modules
 .env
