@@ -1,4 +1,4 @@
-import { $, component$, useSignal } from "@builder.io/qwik";
+import { $, component$, useComputed$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { debounce } from "lodash-es";
 import { hashPasswordWithSalt } from "../../hashPasswordWithSalt.ts";
@@ -10,7 +10,7 @@ const generatePassworddebounced = debounce(async function (
   algorithm: string,
   sethash: (hash: string) => void,
   setalgorithm: (algorithm: string) => void,
-  settablepassword: (pass: string) => void,
+  // setpassword: (pass: string) => void,
   settablesalt: (salt: string) => void,
   passlength: number
 ) {
@@ -22,7 +22,7 @@ const generatePassworddebounced = debounce(async function (
     algorithm,
     sethash,
     setalgorithm,
-    settablepassword,
+    // setpassword,
     settablesalt,
     passlength
   );
@@ -33,7 +33,7 @@ const debouncedGenerateHash = debounce(async function (
   algorithm: string,
   sethash: (hash: string) => void,
   setalgorithm: (algorithm: string) => void,
-  settablepassword: (pass: string) => void,
+  // setpassword: (pass: string) => void,
   settablesalt: (salt: string) => void,
   passlength: number
 ) {
@@ -57,7 +57,7 @@ const debouncedGenerateHash = debounce(async function (
     //@ts-ignore
     setalgorithm(result.algorithm);
     //@ts-ignore
-    settablepassword(password);
+    setpassword(password);
     //@ts-ignore
     settablesalt(result.salt);
     //@ts-ignore
@@ -72,6 +72,10 @@ export default component$(() => {
   const password = useSignal("");
   const algorithmref = useSignal("SHA-512");
   const passlength = useSignal(15);
+
+  const percent = useComputed$(() => {
+    return Math.round(((passlength.value - 1) / (50 - 1)) * 100);
+  });
   const passincrement = $(async function () {
     passlength.value++;
     passlength.value = Math.min(passlength.value, 50);
@@ -89,9 +93,9 @@ export default component$(() => {
       (algorithm) => {
         algorithmref.value = algorithm;
       },
-      (pass) => {
-        password.value = pass;
-      },
+      // (pass) => {
+      //   password.value = pass;
+      // },
       (salt) => {
         saltref.value = salt;
       },
@@ -120,9 +124,9 @@ export default component$(() => {
       (algorithm) => {
         algorithmref.value = algorithm;
       },
-      (pass) => {
-        password.value = pass;
-      },
+      // (pass) => {
+      //   password.value = pass;
+      // },
       (salt) => {
         saltref.value = salt;
       },
@@ -217,21 +221,21 @@ export default component$(() => {
                       </button>
                       <div class="slider-container">
                         <input
+                          bind:value={passlength}
                           type="range"
                           min="1"
                           max="50"
                           class="slider"
-                          style="
-                          background: linear-gradient(
+                          style={`background: linear-gradient(
                             90deg,
-                            transparent 28.5714%,
-                            rgb(0, 112, 246) 28.6714%
+                            transparent ${percent.value}%,
+                            rgb(0, 112, 246) ${percent.value}%
                           );
-                        "
+                            `}
                         />
                         <div
                           id="slider-border-part"
-                          style="--slider-border-part-width: 28.571428571428573%"
+                          style={`--slider-border-part-width: ${percent.value}%`}
                         ></div>
                       </div>
                       <button
