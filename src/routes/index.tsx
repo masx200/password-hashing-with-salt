@@ -1,4 +1,10 @@
-import { $, component$, useComputed$, useSignal } from "@builder.io/qwik";
+import {
+  $,
+  component$,
+  useComputed$,
+  useSignal,
+  useTask$,
+} from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { debounce } from "lodash-es";
 import { hashPasswordWithSalt } from "../../hashPasswordWithSalt.ts";
@@ -69,7 +75,7 @@ const debouncedGenerateHash = debounce(async function (
 export default component$(() => {
   const hashref = useSignal("");
   const saltref = useSignal("");
-  const password = useSignal("");
+  const password = useSignal(() => generate32BytePassword(15));
   const algorithmref = useSignal("SHA-512");
   const passlength = useSignal(15);
 
@@ -132,6 +138,10 @@ export default component$(() => {
       },
       passlength.value
     );
+  });
+
+  useTask$(async () => {
+   
   });
   return (
     <>
