@@ -11,7 +11,7 @@ const debouncedGenerateHash = debounce(async function () {
     //@ts-ignore
     password =
       //@ts-ignore
-      document.getElementById("password").value = generate32BytePassword();
+      document.getElementById("password").value = generate32BytePassword(32);
   }
 
   try {
@@ -39,7 +39,7 @@ const debouncedGenerateHash = debounce(async function () {
 
 const generatePassword = debounce(async function () {
   //@ts-ignore
-  document.getElementById("password").value = generate32BytePassword();
+  document.getElementById("password").value = generate32BytePassword(32);
   await debouncedGenerateHash();
 });
 

@@ -1,20 +1,133 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { debounce } from "lodash-es";
+import { hashPasswordWithSalt } from "../../hashPasswordWithSalt.ts";
+import { generate32BytePassword } from "../../generate32BytePassword.ts";
 
+const generatePassworddebounced = debounce(async function (
+  password: string,
+  setpassword: (pass: string) => void,
+  algorithm: string,
+  sethash: (hash: string) => void,
+  setalgorithm: (algorithm: string) => void,
+  settablepassword: (pass: string) => void,
+  settablesalt: (salt: string) => void,
+  passlength: number
+) {
+  password = generate32BytePassword(passlength);
+  setpassword(password);
+  await debouncedGenerateHash(
+    password,
+    setpassword,
+    algorithm,
+    sethash,
+    setalgorithm,
+    settablepassword,
+    settablesalt,
+    passlength
+  );
+});
+const debouncedGenerateHash = debounce(async function (
+  password: string,
+  setpassword: (pass: string) => void,
+  algorithm: string,
+  sethash: (hash: string) => void,
+  setalgorithm: (algorithm: string) => void,
+  settablepassword: (pass: string) => void,
+  settablesalt: (salt: string) => void,
+  passlength: number
+) {
+  //@ts-ignore
+
+  if (!password) {
+    password = generate32BytePassword(passlength);
+    setpassword(password);
+    //@ts-ignore
+  }
+
+  try {
+    const result = await hashPasswordWithSalt(password, {
+      algorithm,
+      saltlength:
+        "SHA-384" == algorithm ? 48 : "SHA-256" == algorithm ? 32 : 64,
+    });
+
+    sethash(result.hash);
+    // 修改 HTML 模板为表格形式，并居中显示
+    //@ts-ignore
+    setalgorithm(result.algorithm);
+    //@ts-ignore
+    settablepassword(password);
+    //@ts-ignore
+    settablesalt(result.salt);
+    //@ts-ignore
+  } catch (error) {
+    console.error("Hashing failed:", error);
+    alert("Hashing process failed" + "\n" + String(error));
+  }
+});
 export default component$(() => {
+  const hashref = useSignal("");
+  const saltref = useSignal("");
+  const password = useSignal("");
+  const algorithmref = useSignal("SHA-512");
   const passlength = useSignal(15);
-  const passincrement = $(function () {
+  const passincrement = $(async function () {
     passlength.value++;
     passlength.value = Math.min(passlength.value, 50);
   });
-
-  const passdecrement = $(function () {
+  const generatePassword = $(async function () {
+    await generatePassworddebounced(
+      password.value,
+      (pass) => {
+        password.value = pass;
+      },
+      algorithmref.value,
+      (hash) => {
+        hashref.value = hash;
+      },
+      (algorithm) => {
+        algorithmref.value = algorithm;
+      },
+      (pass) => {
+        password.value = pass;
+      },
+      (salt) => {
+        saltref.value = salt;
+      },
+      passlength.value
+    );
+  });
+  const passdecrement = $(async function () {
     passlength.value--;
     passlength.value = Math.max(passlength.value, 1);
   });
   const onsubmit = $(async function (e: SubmitEvent) {
     // console.log(e);
     e.preventDefault();
+  });
+
+  const buttonClick = $(async function () {
+    await debouncedGenerateHash(
+      password.value,
+      (pass) => {
+        password.value = pass;
+      },
+      algorithmref.value,
+      (hash) => {
+        hashref.value = hash;
+      },
+      (algorithm) => {
+        algorithmref.value = algorithm;
+      },
+      (pass) => {
+        password.value = pass;
+      },
+      (salt) => {
+        saltref.value = salt;
+      },
+      passlength.value
+    );
   });
   return (
     <>
@@ -71,7 +184,13 @@ export default component$(() => {
               <span style="text-align: center">
                 <strong>Password:</strong>
               </span>
-              <input type="text" id="password" required class="form-control" />
+              <input
+                type="text"
+                id="password"
+                required
+                class="form-control"
+                bind:value={password}
+              />
             </label>
             <section class="password-generator bg-white">
               <div data-v-1f0937b5="" class="generator-container">
@@ -128,14 +247,24 @@ export default component$(() => {
               </div>
             </section>
 
-            <button type="button" id="generatepassword" class="btn btn-primary">
+            <button
+              type="button"
+              id="generatepassword"
+              class="btn btn-primary"
+              preventdefault:click
+              onclick$={generatePassword}
+            >
               Generate
             </button>
             <label>
               <span style="text-align: center">
                 <strong>Algorithm:</strong>
               </span>
-              <select id="algorithm" class="form-select">
+              <select
+                id="algorithm"
+                class="form-select"
+                bind:value={algorithmref}
+              >
                 <option value="SHA-256">SHA-256</option>
                 <option value="SHA-384">SHA-384</option>
                 <option value="SHA-512" selected>
@@ -143,7 +272,13 @@ export default component$(() => {
                 </option>
               </select>
             </label>
-            <button type="button" id="button" class="btn btn-primary">
+            <button
+              type="button"
+              id="button"
+              class="btn btn-primary"
+              preventdefault:click
+              onclick$={buttonClick}
+            >
               Generate
             </button>
           </form>
@@ -163,25 +298,25 @@ export default component$(() => {
                   <td>
                     <strong>Algorithm:</strong>
                   </td>
-                  <td id="algorithm-table"></td>
+                  <td id="algorithm-table">{algorithmref.value}</td>
                 </tr>
                 <tr>
                   <td>
                     <strong>Password:</strong>
                   </td>
-                  <td id="password-table"></td>
+                  <td id="password-table">{password.value}</td>
                 </tr>
                 <tr>
                   <td>
                     <strong>Salt:</strong>
                   </td>
-                  <td id="salt-table"></td>
+                  <td id="salt-table">{saltref.value}</td>
                 </tr>
                 <tr>
                   <td>
                     <strong>Hash:</strong>
                   </td>
-                  <td id="hash-table"></td>
+                  <td id="hash-table">{hashref.value}</td>
                 </tr>
               </tbody>
             </table>
@@ -197,7 +332,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "Password Hashing with Salt",
     },
   ],
 };
