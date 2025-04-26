@@ -1,4 +1,6 @@
 # Logs
+.vscode
+*.gz
 yarn.lock
 logs
 *.log
