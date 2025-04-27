@@ -9,7 +9,8 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { debounce } from "lodash-es";
 import { hashPasswordWithSalt } from "../../hashPasswordWithSalt.ts";
 import { generate32BytePassword } from "../../generate32BytePassword.ts";
-
+import Table from "../integrations/react/table.tsx";
+import "antd/dist/reset.css"
 const generatePassworddebounced = debounce(async function (
   password: string,
   setpassword: (pass: string) => void,
@@ -321,11 +322,12 @@ export default component$(() => {
             </button>
           </form>
           <div id="result">
+            <Table />
             <table
               class="table table-bordered border-primary"
               style="margin: 0 auto; border-collapse: collapse; width: 100%"
             >
-              <thead>
+              <thead class="table-light">
                 <tr>
                   <th>参数</th>
                   <th>值</th>
