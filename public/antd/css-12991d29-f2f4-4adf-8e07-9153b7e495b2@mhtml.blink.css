@@ -1,3 +1,30 @@
 @charset "utf-8";
 
-.css-var-«r6».ant-pagination { --ant-pagination-item-bg: #ffffff; --ant-pagination-item-size: 32px; --ant-pagination-item-size-sm: 24px; --ant-pagination-item-active-bg: #ffffff; --ant-pagination-item-link-bg: #ffffff; --ant-pagination-item-active-color-disabled: rgba(0,0,0,0.25); --ant-pagination-item-active-bg-disabled: rgba(0,0,0,0.15); --ant-pagination-item-input-bg: #ffffff; --ant-pagination-mini-options-size-changer-top: 0px; --ant-pagination-padding-block: 4px; --ant-pagination-padding-block-sm: 0px; --ant-pagination-padding-block-lg: 7px; --ant-pagination-padding-inline: 11px; --ant-pagination-padding-inline-sm: 7px; --ant-pagination-padding-inline-lg: 11px; --ant-pagination-addon-bg: rgba(0,0,0,0.02); --ant-pagination-active-border-color: #1677ff; --ant-pagination-hover-border-color: #4096ff; --ant-pagination-active-shadow: 0 0 0 2px rgba(5,145,255,0.1); --ant-pagination-error-active-shadow: 0 0 0 2px rgba(255,38,5,0.06); --ant-pagination-warning-active-shadow: 0 0 0 2px rgba(255,215,5,0.1); --ant-pagination-hover-bg: #ffffff; --ant-pagination-active-bg: #ffffff; --ant-pagination-input-font-size: 14px; --ant-pagination-input-font-size-lg: 16px; --ant-pagination-input-font-size-sm: 14px; }
+.css-var-«r6».ant-pagination {
+  --ant-pagination-item-bg: #ffffff;
+  --ant-pagination-item-size: 32px;
+  --ant-pagination-item-size-sm: 24px;
+  --ant-pagination-item-active-bg: #ffffff;
+  --ant-pagination-item-link-bg: #ffffff;
+  --ant-pagination-item-active-color-disabled: rgba(0, 0, 0, 0.25);
+  --ant-pagination-item-active-bg-disabled: rgba(0, 0, 0, 0.15);
+  --ant-pagination-item-input-bg: #ffffff;
+  --ant-pagination-mini-options-size-changer-top: 0px;
+  --ant-pagination-padding-block: 4px;
+  --ant-pagination-padding-block-sm: 0px;
+  --ant-pagination-padding-block-lg: 7px;
+  --ant-pagination-padding-inline: 11px;
+  --ant-pagination-padding-inline-sm: 7px;
+  --ant-pagination-padding-inline-lg: 11px;
+  --ant-pagination-addon-bg: rgba(0, 0, 0, 0.02);
+  --ant-pagination-active-border-color: #1677ff;
+  --ant-pagination-hover-border-color: #4096ff;
+  --ant-pagination-active-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+  --ant-pagination-error-active-shadow: 0 0 0 2px rgba(255, 38, 5, 0.06);
+  --ant-pagination-warning-active-shadow: 0 0 0 2px rgba(255, 215, 5, 0.1);
+  --ant-pagination-hover-bg: #ffffff;
+  --ant-pagination-active-bg: #ffffff;
+  --ant-pagination-input-font-size: 14px;
+  --ant-pagination-input-font-size-lg: 16px;
+  --ant-pagination-input-font-size-sm: 14px;
+}

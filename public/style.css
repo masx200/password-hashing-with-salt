@@ -1,57 +1,57 @@
 td {
-    word-break: break-all; /* 允许在单词内换行，适合长单词或URL [[2]][[9]] */
-    word-wrap: break-word; /* 允许长单词换行，兼容旧浏览器 [[8]] */
-    white-space: normal; /* 允许自动换行（默认值，但需显式声明以覆盖其他样式） */
+  word-break: break-all; /* 允许在单词内换行，适合长单词或URL [[2]][[9]] */
+  word-wrap: break-word; /* 允许长单词换行，兼容旧浏览器 [[8]] */
+  white-space: normal; /* 允许自动换行（默认值，但需显式声明以覆盖其他样式） */
 }
 table {
-    table-layout: auto;
-    width: 100%; /* 或具体像素值 */
+  table-layout: auto;
+  width: 100%; /* 或具体像素值 */
 }
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    background-image: url(https://bingw.jasonzeng.dev/?index=random);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url(https://bingw.jasonzeng.dev/?index=random);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    /* 设置表单宽度 */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  /* 设置表单宽度 */
 }
 
 label {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 button {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 #result {
-    margin-top: 20px;
-    border-collapse: collapse;
-    width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 #result th,
 #result td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
 #result th {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }

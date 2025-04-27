@@ -1666,7 +1666,8 @@
   display: block !important;
   width: 116px !important;
   height: 36px !important;
-  background: url("https://static3.avast.com/10002223/web/i/v3/components/avast-logos/avast-logo-inverse.svg") !important;
+  background: url("https://static3.avast.com/10002223/web/i/v3/components/avast-logos/avast-logo-inverse.svg")
+    !important;
   background-repeat: no-repeat !important;
 }
 #onetrust-consent-sdk #onetrust-close-btn-container {
@@ -1955,7 +1956,8 @@
 }
 #onetrust-consent-sdk #onetrust-pc-sdk .ot-pc-header .ot-pc-logo {
   display: block;
-  background: url("https://static3.avast.com/10002223/web/i/v3/components/avast-logos/avast-logo-inverse.svg") !important;
+  background: url("https://static3.avast.com/10002223/web/i/v3/components/avast-logos/avast-logo-inverse.svg")
+    !important;
   background-repeat: no-repeat !important;
   width: 116px !important;
   height: 37px !important;
@@ -2999,11 +3001,11 @@ body.ot-overflow-hidden {
 #oneTrustMini__buttons button:focus {
   text-decoration: none;
 } /*! END –––– OneTrust Cookie Consent V3 styles */ /*!
-   * Bootstrap  v5.2.1 (https://getbootstrap.com/)
-   * Copyright 2011-2022 The Bootstrap Authors
-   * Copyright 2011-2022 Twitter, Inc.
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   */
+ * Bootstrap  v5.2.1 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
 :root {
   --bs-blue-dark: #071d2b;
   --bs-blue-bright: #0070f6;
@@ -3069,11 +3071,13 @@ body.ot-overflow-hidden {
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 7, 29, 43;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  --bs-font-sans-serif:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace:
+    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
   --bs-gradient: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.15),
@@ -3382,8 +3386,8 @@ select:disabled {
   opacity: 1;
 }
 [list]:not([type="date"]):not([type="datetime-local"]):not([type="month"]):not(
-    [type="week"]
-  ):not([type="time"])::-webkit-calendar-picker-indicator {
+  [type="week"]
+):not([type="time"])::-webkit-calendar-picker-indicator {
   display: none !important;
 }
 button,
@@ -5595,7 +5599,7 @@ progress {
 .bs-popover-top > .popover-arrow,
 .bs-popover-auto[data-popper-placement^="top"] > .popover-arrow {
   bottom: calc(
-    -1 * (var(--bs-popover-arrow-height)) - var(--bs-popover-border-width)
+    -1 * var(--bs-popover-arrow-height) - var(--bs-popover-border-width)
   );
 }
 .bs-popover-top > .popover-arrow::before,
@@ -5618,7 +5622,7 @@ progress {
 .bs-popover-end > .popover-arrow,
 .bs-popover-auto[data-popper-placement^="right"] > .popover-arrow {
   left: calc(
-    -1 * (var(--bs-popover-arrow-height)) - var(--bs-popover-border-width)
+    -1 * var(--bs-popover-arrow-height) - var(--bs-popover-border-width)
   );
   width: var(--bs-popover-arrow-height);
   height: var(--bs-popover-arrow-width);
@@ -5643,7 +5647,7 @@ progress {
 .bs-popover-bottom > .popover-arrow,
 .bs-popover-auto[data-popper-placement^="bottom"] > .popover-arrow {
   top: calc(
-    -1 * (var(--bs-popover-arrow-height)) - var(--bs-popover-border-width)
+    -1 * var(--bs-popover-arrow-height) - var(--bs-popover-border-width)
   );
 }
 .bs-popover-bottom > .popover-arrow::before,
@@ -5678,7 +5682,7 @@ progress {
 .bs-popover-start > .popover-arrow,
 .bs-popover-auto[data-popper-placement^="left"] > .popover-arrow {
   right: calc(
-    -1 * (var(--bs-popover-arrow-height)) - var(--bs-popover-border-width)
+    -1 * var(--bs-popover-arrow-height) - var(--bs-popover-border-width)
   );
   width: var(--bs-popover-arrow-height);
   height: var(--bs-popover-arrow-width);
@@ -5701,7 +5705,8 @@ progress {
   border-left-color: var(--bs-popover-bg);
 }
 .popover-header {
-  padding: var(--bs-popover-header-padding-y) var(--bs-popover-header-padding-x);
+  padding: var(--bs-popover-header-padding-y)
+    var(--bs-popover-header-padding-x);
   margin-bottom: 0;
   font-size: var(--bs-popover-header-font-size);
   color: var(--bs-popover-header-color);
@@ -6381,7 +6386,8 @@ progress {
   transform: translateY(-50%) !important;
 }
 .border {
-  border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)
+    !important;
 }
 .border-0 {
   border: 0 !important;
@@ -13077,11 +13083,11 @@ body .text-muted,
     padding-inline-start: 4.5rem;
   }
 }
-.accordion-holder.faq.bottomLink .accordion-item:nth-last-child(-n + 2) {
+.accordion-holder.faq.bottomLink .accordion-item:nth-last-child(-n+2) {
   border-radius: 0 0 1.5rem 1.5rem;
 }
 @media (min-width: 992px) {
-  .accordion-holder.faq.bottomLink .accordion-item:nth-last-child(-n + 2) {
+  .accordion-holder.faq.bottomLink .accordion-item:nth-last-child(-n+2) {
     border-radius: 0 0 2rem 2rem;
   }
 }
@@ -13143,7 +13149,7 @@ body .text-muted,
   }
 }
 .article .article-img-wrapper {
-  padding: calc((100% / 3) * 2) 50% 0;
+  padding: calc(100% / 3 * 2) 50% 0;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -16796,7 +16802,8 @@ html.js-yandex .js-not-yandex {
 @media (min-width: 992px) {
   .compare-box-grid.boxcount-3 {
     grid-template-rows: repeat(2, auto) 2rem repeat(2, auto);
-    grid-template-areas: "top2 top3" "content2 content3" ". ." "top1 top1" "content1 content1";
+    grid-template-areas:
+      "top2 top3" "content2 content3" ". ." "top1 top1" "content1 content1";
   }
 }
 @media (min-width: 1280px) {
@@ -16833,14 +16840,16 @@ html.js-yandex .js-not-yandex {
   .compare-box-grid.size-sm.boxcount-4 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto) 2rem repeat(2, auto);
-    grid-template-areas: "top1 top2 top3" "content1 content2 content3" ". . ." ". top4 ." ". content4 .";
+    grid-template-areas:
+      "top1 top2 top3" "content1 content2 content3" ". . ." ". top4 ." ". content4 .";
   }
 }
 @media (min-width: 1280px) {
   .compare-box-grid.size-sm.boxcount-4 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
-    grid-template-areas: "top1 top2 top3 top4" "content1 content2 content3 content4";
+    grid-template-areas:
+      "top1 top2 top3 top4" "content1 content2 content3 content4";
   }
 }
 .compare-box-grid
@@ -19176,9 +19185,7 @@ textarea.form-control,
 .custom-select:focus-visible.bold.orange,
 .custom-select:focus-visible.bold.theme-orange {
   border: 1px solid rgba(255, 120, 0, 0.24);
-  box-shadow:
-    0 0 0 3px rgba(255, 120, 0, 0.24),
-    inset 0 0 0 2px #ff7800;
+  box-shadow: 0 0 0 3px rgba(255, 120, 0, 0.24), inset 0 0 0 2px #ff7800;
 }
 .form-select:active.bold.gray,
 .inverse .pricebox .box-container.theme-orange .form-select:active.bold,
@@ -19232,9 +19239,7 @@ textarea.form-control,
   .custom-select.form-select:focus-visible.bold,
 .custom-select:focus-visible.bold.theme-gray {
   border: 1px solid rgba(92, 122, 140, 0.24);
-  box-shadow:
-    0 0 0 3px rgba(92, 122, 140, 0.24),
-    inset 0 0 0 2px #5c7a8c;
+  box-shadow: 0 0 0 3px rgba(92, 122, 140, 0.24), inset 0 0 0 2px #5c7a8c;
 }
 .form-select:active.bold.blue,
 .form-select:active.bold.theme-blue,
@@ -19249,9 +19254,7 @@ textarea.form-control,
 .custom-select:focus-visible.bold.blue,
 .custom-select:focus-visible.bold.theme-blue {
   border: 1px solid rgba(212, 231, 255, 0.24);
-  box-shadow:
-    0 0 0 3px rgba(0, 112, 246, 0.24),
-    inset 0 0 0 2px #0070f6;
+  box-shadow: 0 0 0 3px rgba(0, 112, 246, 0.24), inset 0 0 0 2px #0070f6;
 }
 .form-check {
   display: flex;
@@ -19269,9 +19272,7 @@ textarea.form-control,
   width: 1.5rem;
   height: 1.5rem;
   border: none;
-  box-shadow:
-    inset 0 2px 4px rgba(7, 29, 43, 0.12),
-    inset 0 0 0 1px #c5d6e0;
+  box-shadow: inset 0 2px 4px rgba(7, 29, 43, 0.12), inset 0 0 0 1px #c5d6e0;
   flex-shrink: 0;
 }
 .form-check-input[type="checkbox"] {
@@ -19281,15 +19282,11 @@ textarea.form-control,
   border-radius: 12px;
 }
 .form-check-input:hover {
-  box-shadow:
-    inset 0 2px 4px rgba(7, 29, 43, 0.12),
-    inset 0 0 0 1px #0070f6;
+  box-shadow: inset 0 2px 4px rgba(7, 29, 43, 0.12), inset 0 0 0 1px #0070f6;
   background-color: #f0f7ff;
 }
 .form-check-input:checked {
-  box-shadow:
-    inset 0 2px 4px rgba(7, 29, 43, 0.12),
-    inset 0 0 0 1px #0070f6;
+  box-shadow: inset 0 2px 4px rgba(7, 29, 43, 0.12), inset 0 0 0 1px #0070f6;
 }
 .form-check-input:checked[type="checkbox"] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3e%3cpath d='M2 8L5.55498 11.4473C5.87048 11.7532 6.37371 11.7473 6.68202 11.4341L14 4' stroke='%23071d2b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
@@ -19787,7 +19784,7 @@ textarea.form-control,
   .hero
     .hero-awards-wrap
     .award-badges-wrap.size-sm
-    div:nth-child(n + 5):nth-child(-n + 6) {
+    div:nth-child(n+5):nth-child(-n+6) {
     display: none;
   }
 }
@@ -19795,7 +19792,7 @@ textarea.form-control,
   .hero
     .hero-awards-wrap
     .award-badges-wrap.size-sm
-    div:nth-child(n + 4):nth-child(-n + 6) {
+    div:nth-child(n+4):nth-child(-n+6) {
     display: none;
   }
 }
@@ -23695,22 +23692,22 @@ textarea.form-control,
 }
 @media (min-width: 992px) {
   .media.bg-size-partial .partial-cover {
-    width: calc(100vw - calc(((100% - 960px) / 2) + ((960px / 4) + 1rem)));
+    width: calc(100vw - calc((100% - 960px) / 2 + 960px / 4 + 1rem));
   }
 }
 @media (min-width: 1280px) {
   .media.bg-size-partial .partial-cover {
-    width: calc(100vw - calc(((100% - 1224px) / 2) + ((1224px / 4) + 1rem)));
+    width: calc(100vw - calc((100% - 1224px) / 2 + 1224px / 4 + 1rem));
   }
 }
 @media (min-width: 1366px) {
   .media.bg-size-partial .partial-cover {
-    width: calc(100vw - calc(((100% - 1320px) / 2) + ((1320px / 4) + 1rem)));
+    width: calc(100vw - calc((100% - 1320px) / 2 + 1320px / 4 + 1rem));
   }
 }
 @media (min-width: 1600px) {
   .media.bg-size-partial .partial-cover {
-    width: calc(100vw - calc(((100% - 1392px) / 2) + ((1392px / 4) + 1rem)));
+    width: calc(100vw - calc((100% - 1392px) / 2 + 1392px / 4 + 1rem));
   }
 }
 .media.bg-size-partial.img-position-right .partial-cover {
@@ -24286,7 +24283,8 @@ html.js-ios .js-not-ios {
   }
 }
 .pricebox .box-container.boxcount-1 {
-  grid-template-areas: "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1";
+  grid-template-areas:
+    "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1";
   grid-template-rows: repeat(14, auto);
   -ms-grid-rows: "auto auto auto auto auto auto auto auto auto auto auto auto auto auto";
   grid-template-columns: 288px;
@@ -24294,7 +24292,8 @@ html.js-ios .js-not-ios {
 }
 @media (min-width: 768px) {
   .pricebox .box-container.boxcount-1 {
-    grid-template-areas: "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1";
+    grid-template-areas:
+      "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1";
     grid-template-rows: repeat(14, auto);
     -ms-grid-rows: "auto auto auto auto auto auto auto auto auto auto auto auto auto auto";
   }
@@ -24382,7 +24381,8 @@ html.js-ios .js-not-ios {
   -ms-grid-column: 1;
 }
 .pricebox .box-container.boxcount-2 {
-  grid-template-areas: "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1" "top2" "headline2" "platforms2" "instructions2" "label2" "annual2" "installments2" "price2" "note-under-price2" "cta2" "cta-note2" "cta-secondary2" "footer2" "bottom2";
+  grid-template-areas:
+    "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1" "top2" "headline2" "platforms2" "instructions2" "label2" "annual2" "installments2" "price2" "note-under-price2" "cta2" "cta-note2" "cta-secondary2" "footer2" "bottom2";
   grid-template-rows: repeat(28, auto);
   -ms-grid-rows: "auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto";
   grid-template-columns: 288px;
@@ -24390,7 +24390,8 @@ html.js-ios .js-not-ios {
 }
 @media (min-width: 768px) {
   .pricebox .box-container.boxcount-2 {
-    grid-template-areas: "top1 top2" "headline1 headline2" "platforms1 platforms2" "instructions1 instructions2" "label1 label2" "annual1 annual2" "installments1 installments2" "price1 price2" "note-under-price1 note-under-price2" "cta1 cta2" "cta-note1 cta-note2" "cta-secondary1 cta-secondary2" "footer1 footer2" "bottom1 bottom2";
+    grid-template-areas:
+      "top1 top2" "headline1 headline2" "platforms1 platforms2" "instructions1 instructions2" "label1 label2" "annual1 annual2" "installments1 installments2" "price1 price2" "note-under-price1 note-under-price2" "cta1 cta2" "cta-note1 cta-note2" "cta-secondary1 cta-secondary2" "footer1 footer2" "bottom1 bottom2";
     grid-template-rows: repeat(14, auto);
     -ms-grid-rows: "auto auto auto auto auto auto auto auto auto auto auto auto auto auto";
   }
@@ -24566,7 +24567,8 @@ html.js-ios .js-not-ios {
   -ms-grid-column: 2;
 }
 .pricebox .box-container.boxcount-3 {
-  grid-template-areas: "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1" "top2" "headline2" "platforms2" "instructions2" "label2" "annual2" "installments2" "price2" "note-under-price2" "cta2" "cta-note2" "cta-secondary2" "footer2" "bottom2" "top3" "headline3" "platforms3" "instructions3" "label3" "annual3" "installments3" "price3" "note-under-price3" "cta3" "cta-note3" "cta-secondary3" "footer3" "bottom3";
+  grid-template-areas:
+    "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1" "top2" "headline2" "platforms2" "instructions2" "label2" "annual2" "installments2" "price2" "note-under-price2" "cta2" "cta-note2" "cta-secondary2" "footer2" "bottom2" "top3" "headline3" "platforms3" "instructions3" "label3" "annual3" "installments3" "price3" "note-under-price3" "cta3" "cta-note3" "cta-secondary3" "footer3" "bottom3";
   grid-template-rows: repeat(42, auto);
   -ms-grid-rows: "auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto";
   grid-template-columns: 288px;
@@ -24574,7 +24576,8 @@ html.js-ios .js-not-ios {
 }
 @media (min-width: 768px) {
   .pricebox .box-container.boxcount-3 {
-    grid-template-areas: "top1 top2 top3" "headline1 headline2 headline3" "platforms1 platforms2 platforms3" "instructions1 instructions2 instructions3" "label1 label2 label3" "annual1 annual2 annual3" "installments1 installments2 installments3" "price1 price2 price3" "note-under-price1 note-under-price2 note-under-price3" "cta1 cta2 cta3" "cta-note1 cta-note2 cta-note3" "cta-secondary1 cta-secondary2 cta-secondary3" "footer1 footer2 footer3" "bottom1 bottom2 bottom3";
+    grid-template-areas:
+      "top1 top2 top3" "headline1 headline2 headline3" "platforms1 platforms2 platforms3" "instructions1 instructions2 instructions3" "label1 label2 label3" "annual1 annual2 annual3" "installments1 installments2 installments3" "price1 price2 price3" "note-under-price1 note-under-price2 note-under-price3" "cta1 cta2 cta3" "cta-note1 cta-note2 cta-note3" "cta-secondary1 cta-secondary2 cta-secondary3" "footer1 footer2 footer3" "bottom1 bottom2 bottom3";
     grid-template-rows: repeat(14, auto);
     -ms-grid-rows: "auto auto auto auto auto auto auto auto auto auto auto auto auto auto";
   }
@@ -24820,7 +24823,8 @@ html.js-ios .js-not-ios {
   -ms-grid-column: 3;
 }
 .pricebox .box-container.boxcount-4 {
-  grid-template-areas: "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1" "top2" "headline2" "platforms2" "instructions2" "label2" "annual2" "installments2" "price2" "note-under-price2" "cta2" "cta-note2" "cta-secondary2" "footer2" "bottom2" "top3" "headline3" "platforms3" "instructions3" "label3" "annual3" "installments3" "price3" "note-under-price3" "cta3" "cta-note3" "cta-secondary3" "footer3" "bottom3" "top4" "headline4" "platforms4" "instructions4" "label4" "annual4" "installments4" "price4" "note-under-price4" "cta4" "cta-note4" "cta-secondary4" "footer4" "bottom4";
+  grid-template-areas:
+    "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1" "top2" "headline2" "platforms2" "instructions2" "label2" "annual2" "installments2" "price2" "note-under-price2" "cta2" "cta-note2" "cta-secondary2" "footer2" "bottom2" "top3" "headline3" "platforms3" "instructions3" "label3" "annual3" "installments3" "price3" "note-under-price3" "cta3" "cta-note3" "cta-secondary3" "footer3" "bottom3" "top4" "headline4" "platforms4" "instructions4" "label4" "annual4" "installments4" "price4" "note-under-price4" "cta4" "cta-note4" "cta-secondary4" "footer4" "bottom4";
   grid-template-rows: repeat(56, auto);
   -ms-grid-rows: "auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto";
   grid-template-columns: 288px;
@@ -24828,7 +24832,8 @@ html.js-ios .js-not-ios {
 }
 @media (min-width: 768px) {
   .pricebox .box-container.boxcount-4 {
-    grid-template-areas: "top1 top2 top3 top4" "headline1 headline2 headline3 headline4" "platforms1 platforms2 platforms3 platforms4" "instructions1 instructions2 instructions3 instructions4" "label1 label2 label3 label4" "annual1 annual2 annual3 annual4" "installments1 installments2 installments3 installments4" "price1 price2 price3 price4" "note-under-price1 note-under-price2 note-under-price3 note-under-price4" "cta1 cta2 cta3 cta4" "cta-note1 cta-note2 cta-note3 cta-note4" "cta-secondary1 cta-secondary2 cta-secondary3 cta-secondary4" "footer1 footer2 footer3 footer4" "bottom1 bottom2 bottom3 bottom4";
+    grid-template-areas:
+      "top1 top2 top3 top4" "headline1 headline2 headline3 headline4" "platforms1 platforms2 platforms3 platforms4" "instructions1 instructions2 instructions3 instructions4" "label1 label2 label3 label4" "annual1 annual2 annual3 annual4" "installments1 installments2 installments3 installments4" "price1 price2 price3 price4" "note-under-price1 note-under-price2 note-under-price3 note-under-price4" "cta1 cta2 cta3 cta4" "cta-note1 cta-note2 cta-note3 cta-note4" "cta-secondary1 cta-secondary2 cta-secondary3 cta-secondary4" "footer1 footer2 footer3 footer4" "bottom1 bottom2 bottom3 bottom4";
     grid-template-rows: repeat(14, auto);
     -ms-grid-rows: "auto auto auto auto auto auto auto auto auto auto auto auto auto auto";
   }
@@ -25126,7 +25131,8 @@ html.js-ios .js-not-ios {
   -ms-grid-column: 4;
 }
 .pricebox .box-container.boxcount-5 {
-  grid-template-areas: "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1" "top2" "headline2" "platforms2" "instructions2" "label2" "annual2" "installments2" "price2" "note-under-price2" "cta2" "cta-note2" "cta-secondary2" "footer2" "bottom2" "top3" "headline3" "platforms3" "instructions3" "label3" "annual3" "installments3" "price3" "note-under-price3" "cta3" "cta-note3" "cta-secondary3" "footer3" "bottom3" "top4" "headline4" "platforms4" "instructions4" "label4" "annual4" "installments4" "price4" "note-under-price4" "cta4" "cta-note4" "cta-secondary4" "footer4" "bottom4" "top5" "headline5" "platforms5" "instructions5" "label5" "annual5" "installments5" "price5" "note-under-price5" "cta5" "cta-note5" "cta-secondary5" "footer5" "bottom5";
+  grid-template-areas:
+    "top1" "headline1" "platforms1" "instructions1" "label1" "annual1" "installments1" "price1" "note-under-price1" "cta1" "cta-note1" "cta-secondary1" "footer1" "bottom1" "top2" "headline2" "platforms2" "instructions2" "label2" "annual2" "installments2" "price2" "note-under-price2" "cta2" "cta-note2" "cta-secondary2" "footer2" "bottom2" "top3" "headline3" "platforms3" "instructions3" "label3" "annual3" "installments3" "price3" "note-under-price3" "cta3" "cta-note3" "cta-secondary3" "footer3" "bottom3" "top4" "headline4" "platforms4" "instructions4" "label4" "annual4" "installments4" "price4" "note-under-price4" "cta4" "cta-note4" "cta-secondary4" "footer4" "bottom4" "top5" "headline5" "platforms5" "instructions5" "label5" "annual5" "installments5" "price5" "note-under-price5" "cta5" "cta-note5" "cta-secondary5" "footer5" "bottom5";
   grid-template-rows: repeat(70, auto);
   -ms-grid-rows: "auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto";
   grid-template-columns: 288px;
@@ -25134,7 +25140,8 @@ html.js-ios .js-not-ios {
 }
 @media (min-width: 768px) {
   .pricebox .box-container.boxcount-5 {
-    grid-template-areas: "top1 top2 top3 top4 top5" "headline1 headline2 headline3 headline4 headline5" "platforms1 platforms2 platforms3 platforms4 platforms5" "instructions1 instructions2 instructions3 instructions4 instructions5" "label1 label2 label3 label4 label5" "annual1 annual2 annual3 annual4 annual5" "installments1 installments2 installments3 installments4 installments5" "price1 price2 price3 price4 price5" "note-under-price1 note-under-price2 note-under-price3 note-under-price4 note-under-price5" "cta1 cta2 cta3 cta4 cta5" "cta-note1 cta-note2 cta-note3 cta-note4 cta-note5" "cta-secondary1 cta-secondary2 cta-secondary3 cta-secondary4 cta-secondary5" "footer1 footer2 footer3 footer4 footer5" "bottom1 bottom2 bottom3 bottom4 bottom5";
+    grid-template-areas:
+      "top1 top2 top3 top4 top5" "headline1 headline2 headline3 headline4 headline5" "platforms1 platforms2 platforms3 platforms4 platforms5" "instructions1 instructions2 instructions3 instructions4 instructions5" "label1 label2 label3 label4 label5" "annual1 annual2 annual3 annual4 annual5" "installments1 installments2 installments3 installments4 installments5" "price1 price2 price3 price4 price5" "note-under-price1 note-under-price2 note-under-price3 note-under-price4 note-under-price5" "cta1 cta2 cta3 cta4 cta5" "cta-note1 cta-note2 cta-note3 cta-note4 cta-note5" "cta-secondary1 cta-secondary2 cta-secondary3 cta-secondary4 cta-secondary5" "footer1 footer2 footer3 footer4 footer5" "bottom1 bottom2 bottom3 bottom4 bottom5";
     grid-template-rows: repeat(14, auto);
     -ms-grid-rows: "auto auto auto auto auto auto auto auto auto auto auto auto auto auto";
   }
@@ -25536,7 +25543,8 @@ html.js-ios .js-not-ios {
   .table.columns-1 .pricebox .box-container {
     grid-template-rows: repeat(8, auto);
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "top1 top1" "product-icon1 product-icon1" "table-section-left1 table-section-right1" "toggler1 table-section-right1" "empty1 table-section-right1" "cta-note1 cta-note1" "cta-secondary1 cta-secondary1" "footer1 footer1" "bottom1 bottom1";
+    grid-template-areas:
+      "top1 top1" "product-icon1 product-icon1" "table-section-left1 table-section-right1" "toggler1 table-section-right1" "empty1 table-section-right1" "cta-note1 cta-note1" "cta-secondary1 cta-secondary1" "footer1 footer1" "bottom1 bottom1";
     column-gap: 1rem;
   }
   .table.columns-1 .pricebox .box-container .box-top[abox="1"] {
@@ -25580,7 +25588,8 @@ html.js-ios .js-not-ios {
   .table.columns-2 .pricebox .box-container {
     grid-template-rows: repeat(16, auto);
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "top1 top1" "product-icon1 product-icon1" "table-section-left1 table-section-right1" "toggler1 table-section-right1" "empty1 table-section-right1" "cta-note1 cta-note1" "cta-secondary1 cta-secondary1" "footer1 footer1" "bottom1 bottom1" "top2 top2" "product-icon2 product-icon2" "table-section-left2 table-section-right2" "toggler2 table-section-right2" "empty2 table-section-right2" "cta-note2 cta-note2" "cta-secondary2 cta-secondary2" "footer2 footer2" "bottom2 bottom2";
+    grid-template-areas:
+      "top1 top1" "product-icon1 product-icon1" "table-section-left1 table-section-right1" "toggler1 table-section-right1" "empty1 table-section-right1" "cta-note1 cta-note1" "cta-secondary1 cta-secondary1" "footer1 footer1" "bottom1 bottom1" "top2 top2" "product-icon2 product-icon2" "table-section-left2 table-section-right2" "toggler2 table-section-right2" "empty2 table-section-right2" "cta-note2 cta-note2" "cta-secondary2 cta-secondary2" "footer2 footer2" "bottom2 bottom2";
     column-gap: 1rem;
   }
   .table.columns-2 .pricebox .box-container .box-top[abox="1"] {
@@ -25657,7 +25666,8 @@ html.js-ios .js-not-ios {
   .table.columns-3 .pricebox .box-container {
     grid-template-rows: repeat(24, auto);
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "top1 top1" "product-icon1 product-icon1" "table-section-left1 table-section-right1" "toggler1 table-section-right1" "empty1 table-section-right1" "cta-note1 cta-note1" "cta-secondary1 cta-secondary1" "footer1 footer1" "bottom1 bottom1" "top2 top2" "product-icon2 product-icon2" "table-section-left2 table-section-right2" "toggler2 table-section-right2" "empty2 table-section-right2" "cta-note2 cta-note2" "cta-secondary2 cta-secondary2" "footer2 footer2" "bottom2 bottom2" "top3 top3" "product-icon3 product-icon3" "table-section-left3 table-section-right3" "toggler3 table-section-right3" "empty3 table-section-right3" "cta-note3 cta-note3" "cta-secondary3 cta-secondary3" "footer3 footer3" "bottom3 bottom3";
+    grid-template-areas:
+      "top1 top1" "product-icon1 product-icon1" "table-section-left1 table-section-right1" "toggler1 table-section-right1" "empty1 table-section-right1" "cta-note1 cta-note1" "cta-secondary1 cta-secondary1" "footer1 footer1" "bottom1 bottom1" "top2 top2" "product-icon2 product-icon2" "table-section-left2 table-section-right2" "toggler2 table-section-right2" "empty2 table-section-right2" "cta-note2 cta-note2" "cta-secondary2 cta-secondary2" "footer2 footer2" "bottom2 bottom2" "top3 top3" "product-icon3 product-icon3" "table-section-left3 table-section-right3" "toggler3 table-section-right3" "empty3 table-section-right3" "cta-note3 cta-note3" "cta-secondary3 cta-secondary3" "footer3 footer3" "bottom3 bottom3";
     column-gap: 1rem;
   }
   .table.columns-3 .pricebox .box-container .box-top[abox="1"] {
@@ -25767,7 +25777,8 @@ html.js-ios .js-not-ios {
   .table.columns-4 .pricebox .box-container {
     grid-template-rows: repeat(32, auto);
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "top1 top1" "product-icon1 product-icon1" "table-section-left1 table-section-right1" "toggler1 table-section-right1" "empty1 table-section-right1" "cta-note1 cta-note1" "cta-secondary1 cta-secondary1" "footer1 footer1" "bottom1 bottom1" "top2 top2" "product-icon2 product-icon2" "table-section-left2 table-section-right2" "toggler2 table-section-right2" "empty2 table-section-right2" "cta-note2 cta-note2" "cta-secondary2 cta-secondary2" "footer2 footer2" "bottom2 bottom2" "top3 top3" "product-icon3 product-icon3" "table-section-left3 table-section-right3" "toggler3 table-section-right3" "empty3 table-section-right3" "cta-note3 cta-note3" "cta-secondary3 cta-secondary3" "footer3 footer3" "bottom3 bottom3" "top4 top4" "product-icon4 product-icon4" "table-section-left4 table-section-right4" "toggler4 table-section-right4" "empty4 table-section-right4" "cta-note4 cta-note4" "cta-secondary4 cta-secondary4" "footer4 footer4" "bottom4 bottom4";
+    grid-template-areas:
+      "top1 top1" "product-icon1 product-icon1" "table-section-left1 table-section-right1" "toggler1 table-section-right1" "empty1 table-section-right1" "cta-note1 cta-note1" "cta-secondary1 cta-secondary1" "footer1 footer1" "bottom1 bottom1" "top2 top2" "product-icon2 product-icon2" "table-section-left2 table-section-right2" "toggler2 table-section-right2" "empty2 table-section-right2" "cta-note2 cta-note2" "cta-secondary2 cta-secondary2" "footer2 footer2" "bottom2 bottom2" "top3 top3" "product-icon3 product-icon3" "table-section-left3 table-section-right3" "toggler3 table-section-right3" "empty3 table-section-right3" "cta-note3 cta-note3" "cta-secondary3 cta-secondary3" "footer3 footer3" "bottom3 bottom3" "top4 top4" "product-icon4 product-icon4" "table-section-left4 table-section-right4" "toggler4 table-section-right4" "empty4 table-section-right4" "cta-note4 cta-note4" "cta-secondary4 cta-secondary4" "footer4 footer4" "bottom4 bottom4";
     column-gap: 1rem;
   }
   .table.columns-4 .pricebox .box-container .box-top[abox="1"] {
@@ -25910,7 +25921,8 @@ html.js-ios .js-not-ios {
   .table.columns-5 .pricebox .box-container {
     grid-template-rows: repeat(40, auto);
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "top1 top1" "product-icon1 product-icon1" "table-section-left1 table-section-right1" "toggler1 table-section-right1" "empty1 table-section-right1" "cta-note1 cta-note1" "cta-secondary1 cta-secondary1" "footer1 footer1" "bottom1 bottom1" "top2 top2" "product-icon2 product-icon2" "table-section-left2 table-section-right2" "toggler2 table-section-right2" "empty2 table-section-right2" "cta-note2 cta-note2" "cta-secondary2 cta-secondary2" "footer2 footer2" "bottom2 bottom2" "top3 top3" "product-icon3 product-icon3" "table-section-left3 table-section-right3" "toggler3 table-section-right3" "empty3 table-section-right3" "cta-note3 cta-note3" "cta-secondary3 cta-secondary3" "footer3 footer3" "bottom3 bottom3" "top4 top4" "product-icon4 product-icon4" "table-section-left4 table-section-right4" "toggler4 table-section-right4" "empty4 table-section-right4" "cta-note4 cta-note4" "cta-secondary4 cta-secondary4" "footer4 footer4" "bottom4 bottom4" "top5 top5" "product-icon5 product-icon5" "table-section-left5 table-section-right5" "toggler5 table-section-right5" "empty5 table-section-right5" "cta-note5 cta-note5" "cta-secondary5 cta-secondary5" "footer5 footer5" "bottom5 bottom5";
+    grid-template-areas:
+      "top1 top1" "product-icon1 product-icon1" "table-section-left1 table-section-right1" "toggler1 table-section-right1" "empty1 table-section-right1" "cta-note1 cta-note1" "cta-secondary1 cta-secondary1" "footer1 footer1" "bottom1 bottom1" "top2 top2" "product-icon2 product-icon2" "table-section-left2 table-section-right2" "toggler2 table-section-right2" "empty2 table-section-right2" "cta-note2 cta-note2" "cta-secondary2 cta-secondary2" "footer2 footer2" "bottom2 bottom2" "top3 top3" "product-icon3 product-icon3" "table-section-left3 table-section-right3" "toggler3 table-section-right3" "empty3 table-section-right3" "cta-note3 cta-note3" "cta-secondary3 cta-secondary3" "footer3 footer3" "bottom3 bottom3" "top4 top4" "product-icon4 product-icon4" "table-section-left4 table-section-right4" "toggler4 table-section-right4" "empty4 table-section-right4" "cta-note4 cta-note4" "cta-secondary4 cta-secondary4" "footer4 footer4" "bottom4 bottom4" "top5 top5" "product-icon5 product-icon5" "table-section-left5 table-section-right5" "toggler5 table-section-right5" "empty5 table-section-right5" "cta-note5 cta-note5" "cta-secondary5 cta-secondary5" "footer5 footer5" "bottom5 bottom5";
     column-gap: 1rem;
   }
   .table.columns-5 .pricebox .box-container .box-top[abox="1"] {
@@ -30958,7 +30970,7 @@ html.js-ios .js-not-ios {
   }
 }
 .signpost.type-full .signpost-img-wrapper {
-  padding: calc((100% / 3) * 2) 50% 0;
+  padding: calc(100% / 3 * 2) 50% 0;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -31710,14 +31722,14 @@ html.js-ios .js-not-ios {
     width: calc(100% - 432px);
   }
   .table.columns-2.no-pricebox.highlight-1.columns-2:not(
-      .no-row-headers
-    ):after {
+    .no-row-headers
+  ):after {
     width: calc(calc(100% - 432px) / 2);
     inset-inline-end: calc(calc(calc(100% - 432px) / 2) * calc(2 - 1));
   }
   .table.columns-2.no-pricebox.highlight-2.columns-2:not(
-      .no-row-headers
-    ):after {
+    .no-row-headers
+  ):after {
     width: calc(calc(100% - 432px) / 2);
     inset-inline-end: calc(calc(calc(100% - 432px) / 2) * calc(2 - 2));
   }
@@ -31745,9 +31757,7 @@ html.js-ios .js-not-ios {
   .table .table-header-tr + .content-tr .cell,
   .table .top-price-tr + .content-tr .row-header,
   .table .top-price-tr + .content-tr .cell {
-    box-shadow:
-      inset 0 -1px #c5d6e0,
-      inset 0 1px #c5d6e0;
+    box-shadow: inset 0 -1px #c5d6e0, inset 0 1px #c5d6e0;
   }
   .table .content-tr:first-child .row-header[class*="bg-orange-"],
   .table .content-tr:first-child .cell[class*="bg-orange-"],
@@ -31755,9 +31765,7 @@ html.js-ios .js-not-ios {
   .table .table-header-tr + .content-tr .cell[class*="bg-orange-"],
   .table .top-price-tr + .content-tr .row-header[class*="bg-orange-"],
   .table .top-price-tr + .content-tr .cell[class*="bg-orange-"] {
-    box-shadow:
-      inset 0 -1px #ffddbf,
-      inset 0 1px #ffddbf;
+    box-shadow: inset 0 -1px #ffddbf, inset 0 1px #ffddbf;
   }
 }
 .table .table-header-tr.full .row-header {
@@ -34711,9 +34719,7 @@ a.col-header:hover .btn:not(:disabled):not(.disabled).link .btn-icon,
     height: 0;
     opacity: 0;
     overflow: hidden;
-    transition:
-      height 1s ease-in,
-      opacity 0.1s ease-in;
+    transition: height 1s ease-in, opacity 0.1s ease-in;
   }
   .productbox.productbox-compact .product-info .list-item.show {
     height: auto;
@@ -35054,9 +35060,7 @@ h2.section-header,
 .navigation-for-desktop .header .first-menu ul li {
   padding-top: 1rem;
   position: relative;
-  transition:
-    250ms color ease-in,
-    250ms background ease-in;
+  transition: 250ms color ease-in, 250ms background ease-in;
   border-radius: 1rem 1rem 0 0;
 }
 .navigation-for-desktop .header .first-menu ul li a:focus,
@@ -35151,7 +35155,7 @@ h2.section-header,
     .header
     .second-menu.about-us
     ul[role="menu"]
-    li:nth-child(n + 2)
+    li:nth-child(n+2)
     .subcategory,
   .navigation-for-desktop
     .header
@@ -35347,9 +35351,7 @@ h2.section-header,
   margin-top: -1px;
   visibility: hidden;
   opacity: 0;
-  transition:
-    250ms opacity ease-in,
-    250ms visibility;
+  transition: 250ms opacity ease-in, 250ms visibility;
 }
 @media (max-width: 1365.98px) {
   .navigation-for-desktop .header .second-menu.blogs {
@@ -35391,7 +35393,7 @@ h2.section-header,
   .navigation-for-desktop
     .header
     .second-menu.blogs
-    > li:nth-child(-n + 3):after {
+    > li:nth-child(-n+3):after {
     content: "";
     display: block;
     height: 1px;
@@ -35431,9 +35433,7 @@ h2.section-header,
   margin-top: -1px;
   visibility: hidden;
   opacity: 0;
-  transition:
-    250ms opacity ease-in,
-    250ms visibility;
+  transition: 250ms opacity ease-in, 250ms visibility;
   min-width: calc(100% + 24px);
   border-radius: 1rem;
   border-start-start-radius: 0;
@@ -37085,7 +37085,7 @@ h2.section-header,
   top: calc(1rem * 4.5 - 1px);
   inset-inline-end: 0;
   overflow-y: auto;
-  width: calc(100% - (1rem * 1.5));
+  width: calc(100% - 1rem * 1.5);
   max-width: 33rem;
   max-height: calc(100vh - (5rem + 4rem));
   margin-inline-start: 1.5rem;
@@ -37235,13 +37235,13 @@ html[dir="rtl"] .navigation-for-mobile .header .second-menu .back:before {
   .header
   .second-menu.for-home
   > ul:not(.mobile-links-top)
-  > li:not(:nth-last-child(-n + 2))
+  > li:not(:nth-last-child(-n+2))
   .subcategory:after,
 .navigation-for-mobile
   .header
   .second-menu.for-business
   > ul:not(.mobile-links-top)
-  > li:not(:nth-last-child(-n + 2))
+  > li:not(:nth-last-child(-n+2))
   .subcategory:after {
   display: block;
   content: "";
@@ -38640,7 +38640,7 @@ body.navigation-for-mobile.alert.alert-blue-bright:not(.navigation-closed) nav {
   bottom: 0;
   left: 1rem;
   height: 1px;
-  width: calc(100% - (1rem * 2));
+  width: calc(100% - 1rem * 2);
   background-color: #345970;
 }
 .footer-links.js-colapse .links .h7,
@@ -38778,7 +38778,7 @@ body.navigation-for-mobile.alert.alert-blue-bright:not(.navigation-closed) nav {
     top: 0;
     left: 1rem;
     height: 1px;
-    width: calc(100% - (1rem * 2));
+    width: calc(100% - 1rem * 2);
     background-color: #345970;
   }
 }

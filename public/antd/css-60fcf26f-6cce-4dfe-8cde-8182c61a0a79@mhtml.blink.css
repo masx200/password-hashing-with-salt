@@ -1,3 +1,6 @@
 @charset "utf-8";
 
-.css-var-«r6».ant-tag { --ant-tag-default-bg: #fafafa; --ant-tag-default-color: rgba(0,0,0,0.88); }
+.css-var-«r6».ant-tag {
+  --ant-tag-default-bg: #fafafa;
+  --ant-tag-default-color: rgba(0, 0, 0, 0.88);
+}

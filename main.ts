@@ -11,21 +11,25 @@ const debouncedGenerateHash = debounce(async function () {
     //@ts-ignore
     password =
       //@ts-ignore
-      document.getElementById("password").value = generate32BytePassword(32);
+      document.getElementById("password").value =
+        generate32BytePassword(32);
   }
 
   try {
     const result = await hashPasswordWithSalt(password, {
       algorithm,
-      saltlength:
-        "SHA-384" == algorithm ? 48 : "SHA-256" == algorithm ? 32 : 64,
+      saltlength: "SHA-384" == algorithm
+        ? 48
+        : "SHA-256" == algorithm
+        ? 32
+        : 64,
     });
     // 修改 HTML 模板为表格形式，并居中显示
     //@ts-ignore
     document.getElementById("hash-table").innerHTML = `${result.hash}`;
     //@ts-ignore
     document.getElementById(
-      "algorithm-table"
+      "algorithm-table",
     ).innerHTML = `${result.algorithm}`;
     //@ts-ignore
     document.getElementById("password-table").innerHTML = `${password}`;
@@ -87,5 +91,5 @@ document.addEventListener(
       }
     });
   },
-  { once: true }
+  { once: true },
 );

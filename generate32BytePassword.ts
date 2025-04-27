@@ -1,4 +1,4 @@
-function generate32BytePassword(length :number) {
+function generate32BytePassword(length: number) {
   const charset = "abcdefghijklmnopqrstuvwxyz0123456789"; // 字符集定义 [[6]][[8]]
   const randomValues = new Uint8Array(length ?? 32); // 生成32字节的随机值 [[2]][[9]]
   crypto.getRandomValues(randomValues); // 加密安全的随机数生成 [[3]][[4]]

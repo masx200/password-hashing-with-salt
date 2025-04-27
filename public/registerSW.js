@@ -4,6 +4,6 @@ if ("serviceWorker" in navigator) {
     () => {
       navigator.serviceWorker.register("/sw.js", { scope: "/" });
     },
-    { once: true }
+    { once: true },
   );
 }

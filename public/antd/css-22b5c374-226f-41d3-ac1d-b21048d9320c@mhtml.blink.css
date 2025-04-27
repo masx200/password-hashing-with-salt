@@ -1,3 +1,41 @@
 @charset "utf-8";
 
-.css-var-«r6».ant-table-css-var { --ant-table-header-bg: #fafafa; --ant-table-header-color: rgba(0,0,0,0.88); --ant-table-header-sort-active-bg: #f0f0f0; --ant-table-header-sort-hover-bg: #f0f0f0; --ant-table-body-sort-bg: #fafafa; --ant-table-row-hover-bg: #fafafa; --ant-table-row-selected-bg: #e6f4ff; --ant-table-row-selected-hover-bg: #bae0ff; --ant-table-row-expanded-bg: rgba(0,0,0,0.02); --ant-table-cell-padding-block: 16px; --ant-table-cell-padding-inline: 16px; --ant-table-cell-padding-block-md: 12px; --ant-table-cell-padding-inline-md: 8px; --ant-table-cell-padding-block-sm: 8px; --ant-table-cell-padding-inline-sm: 8px; --ant-table-border-color: #f0f0f0; --ant-table-header-border-radius: 8px; --ant-table-footer-bg: #fafafa; --ant-table-footer-color: rgba(0,0,0,0.88); --ant-table-cell-font-size: 14px; --ant-table-cell-font-size-md: 14px; --ant-table-cell-font-size-sm: 14px; --ant-table-header-split-color: #f0f0f0; --ant-table-fixed-header-sort-active-bg: #f0f0f0; --ant-table-header-filter-hover-bg: rgba(0,0,0,0.06); --ant-table-filter-dropdown-menu-bg: #ffffff; --ant-table-filter-dropdown-bg: #ffffff; --ant-table-expand-icon-bg: #ffffff; --ant-table-selection-column-width: 32px; --ant-table-sticky-scroll-bar-bg: rgba(0,0,0,0.25); --ant-table-sticky-scroll-bar-border-radius: 100px; --ant-table-expand-icon-margin-top: 2.5px; --ant-table-header-icon-color: rgba(0,0,0,0.29250000000000004); --ant-table-header-icon-hover-color: rgba(0,0,0,0.5720000000000001); --ant-table-expand-icon-half-inner: 7px; --ant-table-expand-icon-size: 17px; --ant-table-expand-icon-scale: 0.9411764705882353; }
+.css-var-«r6».ant-table-css-var {
+  --ant-table-header-bg: #fafafa;
+  --ant-table-header-color: rgba(0, 0, 0, 0.88);
+  --ant-table-header-sort-active-bg: #f0f0f0;
+  --ant-table-header-sort-hover-bg: #f0f0f0;
+  --ant-table-body-sort-bg: #fafafa;
+  --ant-table-row-hover-bg: #fafafa;
+  --ant-table-row-selected-bg: #e6f4ff;
+  --ant-table-row-selected-hover-bg: #bae0ff;
+  --ant-table-row-expanded-bg: rgba(0, 0, 0, 0.02);
+  --ant-table-cell-padding-block: 16px;
+  --ant-table-cell-padding-inline: 16px;
+  --ant-table-cell-padding-block-md: 12px;
+  --ant-table-cell-padding-inline-md: 8px;
+  --ant-table-cell-padding-block-sm: 8px;
+  --ant-table-cell-padding-inline-sm: 8px;
+  --ant-table-border-color: #f0f0f0;
+  --ant-table-header-border-radius: 8px;
+  --ant-table-footer-bg: #fafafa;
+  --ant-table-footer-color: rgba(0, 0, 0, 0.88);
+  --ant-table-cell-font-size: 14px;
+  --ant-table-cell-font-size-md: 14px;
+  --ant-table-cell-font-size-sm: 14px;
+  --ant-table-header-split-color: #f0f0f0;
+  --ant-table-fixed-header-sort-active-bg: #f0f0f0;
+  --ant-table-header-filter-hover-bg: rgba(0, 0, 0, 0.06);
+  --ant-table-filter-dropdown-menu-bg: #ffffff;
+  --ant-table-filter-dropdown-bg: #ffffff;
+  --ant-table-expand-icon-bg: #ffffff;
+  --ant-table-selection-column-width: 32px;
+  --ant-table-sticky-scroll-bar-bg: rgba(0, 0, 0, 0.25);
+  --ant-table-sticky-scroll-bar-border-radius: 100px;
+  --ant-table-expand-icon-margin-top: 2.5px;
+  --ant-table-header-icon-color: rgba(0, 0, 0, 0.29250000000000004);
+  --ant-table-header-icon-hover-color: rgba(0, 0, 0, 0.5720000000000001);
+  --ant-table-expand-icon-half-inner: 7px;
+  --ant-table-expand-icon-size: 17px;
+  --ant-table-expand-icon-scale: 0.9411764705882353;
+}

@@ -1,131 +1,484 @@
 @charset "utf-8";
 
-body { margin: 0px; padding: 0px; }
-
-.dumi-default-search-result > dl { margin: 2px 0px; }
-
-.dumi-default-search-result > dl > dt { height: 30px; padding: 0px 16px; font-weight: 700; font-size: 14px; line-height: 30px; color: rgb(79, 88, 102); background-color: rgb(228, 233, 236); }
-
-[data-prefers-color="dark"] .dumi-default-search-result > dl > dt { color: rgb(133, 144, 160); background-color: rgb(42, 53, 60); }
-
-.dumi-default-search-result > dl > dt:first-child { margin-top: -2px; }
-
-.dumi-default-search-result > dl > dt + dd { margin-top: 2px; }
-
-.dumi-default-search-result > dl > dd { margin: 0px 4px; padding: 2px 0px; }
-
-.dumi-default-search-result > dl > dd + dd { border-top: 1px dashed rgb(228, 233, 236); }
-
-[data-prefers-color="dark"] .dumi-default-search-result > dl > dd + dd { border-top-color: rgb(42, 53, 60); }
-
-.dumi-default-search-result > dl > dd + dt { margin-top: 2px; }
-
-.dumi-default-search-result > dl > dd > a { position: relative; display: flex; height: 60px; flex-direction: column; justify-content: center; padding-top: 6px; padding-bottom: 8px; padding-inline: 54px 12px; text-decoration: none; box-sizing: border-box; border-radius: 4px; }
-
-.dumi-default-search-result > dl > dd > a[data-active], .dumi-default-search-result > dl > dd > a:hover { background-color: rgb(22, 119, 255); }
-
-[data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a[data-active], [data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a:hover { background-color: rgb(0, 24, 58); }
-
-.dumi-default-search-result > dl > dd > a[data-active] > h4, .dumi-default-search-result > dl > dd > a:hover > h4, .dumi-default-search-result > dl > dd > a[data-active] > p, .dumi-default-search-result > dl > dd > a:hover > p { color: rgb(255, 255, 255); }
-
-[data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a[data-active] > h4, [data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a:hover > h4, [data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a[data-active] > p, [data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a:hover > p { color: rgb(204, 204, 204); }
-
-.dumi-default-search-result > dl > dd > a[data-active] > svg, .dumi-default-search-result > dl > dd > a:hover > svg { fill: rgb(255, 255, 255); }
-
-[data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a[data-active] > svg, [data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a:hover > svg { fill: rgb(204, 204, 204); }
-
-.dumi-default-search-result > dl > dd > a > svg { position: absolute; top: 14px; inset-inline-start: 14px; width: 32px; height: 32px; fill: rgb(194, 201, 204); }
-
-[data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a > svg { fill: rgb(40, 45, 48); }
-
-.dumi-default-search-result > dl > dd > a > h4, .dumi-default-search-result > dl > dd > a > p { margin: 0px; line-height: 1.4; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
-
-.dumi-default-search-result > dl > dd > a > h4 { color: rgb(79, 88, 102); font-size: 14px; }
-
-[data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a > h4 { color: rgb(133, 144, 160); }
-
-.dumi-default-search-result > dl > dd > a > p { margin-top: 2px; font-size: 13px; color: rgb(138, 144, 153); }
-
-[data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a > p { color: rgb(97, 109, 127); }
-
-.dumi-default-search-result > dl > dd > a > p:empty { display: none; }
-
-.dumi-default-search-result mark { color: rgb(72, 70, 7); padding: 0px 2px; border-radius: 2px; background-color: rgb(255, 249, 197); }
-
-[data-prefers-color="dark"] .dumi-default-search-result mark { color: rgb(147, 145, 71); background-color: rgb(56, 37, 6); }
-
-.dumi-default-search-result .dumi-default-search-empty { display: flex; height: 140px; align-items: center; justify-content: center; color: rgb(138, 144, 153); font-size: 16px; }
-
-[data-prefers-color="dark"] .dumi-default-search-result .dumi-default-search-empty { color: rgb(97, 109, 127); }
-
-.dumi-default-search-result .dumi-default-search-empty > svg { margin-inline-end: 8px; width: 48px; fill: rgb(192, 196, 201); }
-
-[data-prefers-color="dark"] .dumi-default-search-result .dumi-default-search-empty > svg { fill: rgb(52, 59, 69); }
-
-.dumi-default-search-bar { position: relative; }
-
-@media only screen and (max-width: 767px) {
-  .dumi-default-search-bar { display: none; }
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
-.dumi-default-search-bar:not(:last-child) { margin-inline-end: 28px; }
-
-.dumi-default-search-bar-svg { position: absolute; top: 50%; margin-top: 1px; inset-inline-start: 16px; width: 16px; fill: rgb(138, 144, 153); transform: translateY(-50%); }
-
-[data-prefers-color="dark"] .dumi-default-search-bar-svg { fill: rgb(97, 109, 127); }
-
-.dumi-default-search-bar-input { width: 280px; height: 40px; padding: 0px; padding-inline: 40px 12px; color: rgb(48, 54, 63); font-size: 14px; border: 1px solid rgb(208, 213, 216); border-radius: 20px; box-sizing: border-box; outline: none; transition: 0.3s; background-color: transparent; }
-
-[data-prefers-color="dark"] .dumi-default-search-bar-input { color: rgb(198, 201, 205); border-color: rgb(28, 32, 34); }
-
-.dumi-default-search-bar-input:focus { border-color: rgba(22, 119, 255, 0.5); background-color: rgb(255, 255, 255); box-shadow: rgba(22, 119, 255, 0.1) 0px 0px 0px 3px; }
-
-[data-prefers-color="dark"] .dumi-default-search-bar-input:focus { border-color: rgba(0, 83, 200, 0.5); background-color: rgb(5, 7, 9); box-shadow: rgba(0, 83, 200, 0.1) 0px 0px 0px 3px; }
-
-.dumi-default-search-bar-input:focus ~ .dumi-default-search-shortcut, .dumi-default-search-bar-input:not(:placeholder-shown) ~ .dumi-default-search-shortcut { opacity: 0; }
-
-.dumi-default-search-bar .dumi-default-search-shortcut { position: absolute; top: 50%; inset-inline-end: 11px; display: inline-block; padding: 4px 8px; color: rgb(138, 144, 153); font-size: 12px; line-height: 1; white-space: nowrap; background-color: rgba(255, 255, 255, 0.8); border-radius: 11px; border: 1px solid rgb(208, 213, 216); transform: translateY(-50%); transition: 0.3s; pointer-events: none; }
-
-[data-prefers-color="dark"] .dumi-default-search-bar .dumi-default-search-shortcut { background-color: rgba(0, 0, 0, 0.2); border-color: rgb(28, 32, 34); }
-
-@media only screen and (max-width: 767px) {
-  .dumi-default-search-bar .dumi-default-search-shortcut { display: none; }
+.dumi-default-search-result > dl {
+  margin: 2px 0px;
 }
 
-.dumi-default-search-bar .dumi-default-search-popover { position: absolute; top: 100%; inset-inline-end: 0px; display: flex; flex-direction: column; width: 540px; max-height: 460px; margin-top: 18px; background-color: rgb(255, 255, 255); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 30px; }
+.dumi-default-search-result > dl > dt {
+  height: 30px;
+  padding: 0px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  color: rgb(79, 88, 102);
+  background-color: rgb(228, 233, 236);
+}
 
-[data-prefers-color="dark"] .dumi-default-search-bar .dumi-default-search-popover { background-color: rgb(15, 22, 29); }
+[data-prefers-color="dark"] .dumi-default-search-result > dl > dt {
+  color: rgb(133, 144, 160);
+  background-color: rgb(42, 53, 60);
+}
 
-.dumi-default-search-bar .dumi-default-search-popover::before { content: ""; position: absolute; bottom: 100%; inset-inline-end: 100px; display: inline-block; width: 0px; height: 0px; border-width: 8px; border-style: solid; border-color: transparent transparent rgb(255, 255, 255); border-image: initial; }
+.dumi-default-search-result > dl > dt:first-child {
+  margin-top: -2px;
+}
 
-[data-prefers-color="dark"] .dumi-default-search-bar .dumi-default-search-popover::before { border-bottom-color: rgb(15, 22, 29); }
+.dumi-default-search-result > dl > dt + dd {
+  margin-top: 2px;
+}
 
-.dumi-default-search-bar .dumi-default-search-popover > section { flex: 1 1 0%; min-height: 60px; overflow: auto; overscroll-behavior: contain; border-radius: inherit; }
+.dumi-default-search-result > dl > dd {
+  margin: 0px 4px;
+  padding: 2px 0px;
+}
 
-.dumi-default-search-bar .dumi-default-search-modal { position: fixed; top: 0px; inset-inline-start: 0px; z-index: 1000; width: 100vw; height: 100vh; display: flex; justify-content: center; }
+.dumi-default-search-result > dl > dd + dd {
+  border-top: 1px dashed rgb(228, 233, 236);
+}
 
-.dumi-default-search-bar .dumi-default-search-modal-mask { background-color: rgba(0, 0, 0, 0.45); width: 100%; height: 100%; }
+[data-prefers-color="dark"] .dumi-default-search-result > dl > dd + dd {
+  border-top-color: rgb(42, 53, 60);
+}
 
-.dumi-default-search-bar .dumi-default-search-modal-content { position: absolute; top: 60px; background-color: rgb(255, 255, 255); width: 500px; padding: 12px; box-sizing: border-box; box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 0px 0px inset, rgb(85, 90, 100) 0px 3px 8px 0px; border-radius: 8px; max-height: calc(100% - 120px); display: flex; flex-direction: column; }
+.dumi-default-search-result > dl > dd + dt {
+  margin-top: 2px;
+}
 
-[data-prefers-color="dark"] .dumi-default-search-bar .dumi-default-search-modal-content { background-color: rgb(15, 22, 29); }
+.dumi-default-search-result > dl > dd > a {
+  position: relative;
+  display: flex;
+  height: 60px;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  padding-inline: 54px 12px;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
 
-.dumi-default-search-bar .dumi-default-search-modal .dumi-default-search-bar-input { width: 100%; border-radius: 4px; }
+.dumi-default-search-result > dl > dd > a[data-active],
+.dumi-default-search-result > dl > dd > a:hover {
+  background-color: rgb(22, 119, 255);
+}
 
-.dumi-default-search-bar .dumi-default-search-modal .dumi-default-search-result { min-height: 60px; margin-top: 12px; flex: 1 1 auto; overflow: auto; }
+[data-prefers-color="dark"]
+  .dumi-default-search-result
+  > dl
+  > dd
+  > a[data-active],
+[data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a:hover {
+  background-color: rgb(0, 24, 58);
+}
 
-.dumi-default-search-bar .dumi-default-search-modal .dumi-default-search-result > dl > dd { margin: 0px auto; }
+.dumi-default-search-result > dl > dd > a[data-active] > h4,
+.dumi-default-search-result > dl > dd > a:hover > h4,
+.dumi-default-search-result > dl > dd > a[data-active] > p,
+.dumi-default-search-result > dl > dd > a:hover > p {
+  color: rgb(255, 255, 255);
+}
 
-.dumi-default-search-bar .dumi-default-search-modal-commands { justify-content: flex-start; font-size: 12px; color: rgb(138, 144, 153); list-style: none; padding: 12px 0px 0px; margin: 0px; border-top: 1px solid rgb(228, 233, 236); display: flex; align-items: center; user-select: none; }
+[data-prefers-color="dark"]
+  .dumi-default-search-result
+  > dl
+  > dd
+  > a[data-active]
+  > h4,
+[data-prefers-color="dark"]
+  .dumi-default-search-result
+  > dl
+  > dd
+  > a:hover
+  > h4,
+[data-prefers-color="dark"]
+  .dumi-default-search-result
+  > dl
+  > dd
+  > a[data-active]
+  > p,
+[data-prefers-color="dark"]
+  .dumi-default-search-result
+  > dl
+  > dd
+  > a:hover
+  > p {
+  color: rgb(204, 204, 204);
+}
 
-[data-prefers-color="dark"] .dumi-default-search-bar .dumi-default-search-modal-commands { color: rgb(97, 109, 127); border-top-color: rgb(42, 53, 60); }
+.dumi-default-search-result > dl > dd > a[data-active] > svg,
+.dumi-default-search-result > dl > dd > a:hover > svg {
+  fill: rgb(255, 255, 255);
+}
 
-.dumi-default-search-bar .dumi-default-search-modal-commands > li { margin-inline-end: 10px; }
+[data-prefers-color="dark"]
+  .dumi-default-search-result
+  > dl
+  > dd
+  > a[data-active]
+  > svg,
+[data-prefers-color="dark"]
+  .dumi-default-search-result
+  > dl
+  > dd
+  > a:hover
+  > svg {
+  fill: rgb(204, 204, 204);
+}
 
-.dumi-default-search-bar .dumi-default-search-modal-commands-arrow .dumi-default-search-modal-shortcut { margin-inline-end: 4px; }
+.dumi-default-search-result > dl > dd > a > svg {
+  position: absolute;
+  top: 14px;
+  inset-inline-start: 14px;
+  width: 32px;
+  height: 32px;
+  fill: rgb(194, 201, 204);
+}
 
-.dumi-default-search-bar .dumi-default-search-modal-commands-text { margin-inline-start: 5px; }
+[data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a > svg {
+  fill: rgb(40, 45, 48);
+}
 
-.dumi-default-search-bar .dumi-default-search-modal-shortcut { display: inline-block; padding: 4px 8px; color: rgb(138, 144, 153); font-size: 12px; line-height: 1; white-space: nowrap; background-color: rgb(247, 249, 251); border-radius: 3px; border-width: 1px 1px 2px; border-style: solid; border-color: rgb(208, 213, 216); border-image: initial; transition: 0.3s; pointer-events: none; }
+.dumi-default-search-result > dl > dd > a > h4,
+.dumi-default-search-result > dl > dd > a > p {
+  margin: 0px;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
-[data-prefers-color="dark"] .dumi-default-search-bar .dumi-default-search-modal-shortcut { color: rgb(97, 109, 127); background-color: rgb(5, 7, 9); border-color: rgb(28, 32, 34); }
+.dumi-default-search-result > dl > dd > a > h4 {
+  color: rgb(79, 88, 102);
+  font-size: 14px;
+}
+
+[data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a > h4 {
+  color: rgb(133, 144, 160);
+}
+
+.dumi-default-search-result > dl > dd > a > p {
+  margin-top: 2px;
+  font-size: 13px;
+  color: rgb(138, 144, 153);
+}
+
+[data-prefers-color="dark"] .dumi-default-search-result > dl > dd > a > p {
+  color: rgb(97, 109, 127);
+}
+
+.dumi-default-search-result > dl > dd > a > p:empty {
+  display: none;
+}
+
+.dumi-default-search-result mark {
+  color: rgb(72, 70, 7);
+  padding: 0px 2px;
+  border-radius: 2px;
+  background-color: rgb(255, 249, 197);
+}
+
+[data-prefers-color="dark"] .dumi-default-search-result mark {
+  color: rgb(147, 145, 71);
+  background-color: rgb(56, 37, 6);
+}
+
+.dumi-default-search-result .dumi-default-search-empty {
+  display: flex;
+  height: 140px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(138, 144, 153);
+  font-size: 16px;
+}
+
+[data-prefers-color="dark"]
+  .dumi-default-search-result
+  .dumi-default-search-empty {
+  color: rgb(97, 109, 127);
+}
+
+.dumi-default-search-result .dumi-default-search-empty > svg {
+  margin-inline-end: 8px;
+  width: 48px;
+  fill: rgb(192, 196, 201);
+}
+
+[data-prefers-color="dark"]
+  .dumi-default-search-result
+  .dumi-default-search-empty
+  > svg {
+  fill: rgb(52, 59, 69);
+}
+
+.dumi-default-search-bar {
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .dumi-default-search-bar {
+    display: none;
+  }
+}
+
+.dumi-default-search-bar:not(:last-child) {
+  margin-inline-end: 28px;
+}
+
+.dumi-default-search-bar-svg {
+  position: absolute;
+  top: 50%;
+  margin-top: 1px;
+  inset-inline-start: 16px;
+  width: 16px;
+  fill: rgb(138, 144, 153);
+  transform: translateY(-50%);
+}
+
+[data-prefers-color="dark"] .dumi-default-search-bar-svg {
+  fill: rgb(97, 109, 127);
+}
+
+.dumi-default-search-bar-input {
+  width: 280px;
+  height: 40px;
+  padding: 0px;
+  padding-inline: 40px 12px;
+  color: rgb(48, 54, 63);
+  font-size: 14px;
+  border: 1px solid rgb(208, 213, 216);
+  border-radius: 20px;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.3s;
+  background-color: transparent;
+}
+
+[data-prefers-color="dark"] .dumi-default-search-bar-input {
+  color: rgb(198, 201, 205);
+  border-color: rgb(28, 32, 34);
+}
+
+.dumi-default-search-bar-input:focus {
+  border-color: rgba(22, 119, 255, 0.5);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(22, 119, 255, 0.1) 0px 0px 0px 3px;
+}
+
+[data-prefers-color="dark"] .dumi-default-search-bar-input:focus {
+  border-color: rgba(0, 83, 200, 0.5);
+  background-color: rgb(5, 7, 9);
+  box-shadow: rgba(0, 83, 200, 0.1) 0px 0px 0px 3px;
+}
+
+.dumi-default-search-bar-input:focus ~ .dumi-default-search-shortcut,
+.dumi-default-search-bar-input:not(:placeholder-shown)
+  ~ .dumi-default-search-shortcut {
+  opacity: 0;
+}
+
+.dumi-default-search-bar .dumi-default-search-shortcut {
+  position: absolute;
+  top: 50%;
+  inset-inline-end: 11px;
+  display: inline-block;
+  padding: 4px 8px;
+  color: rgb(138, 144, 153);
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 11px;
+  border: 1px solid rgb(208, 213, 216);
+  transform: translateY(-50%);
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+[data-prefers-color="dark"]
+  .dumi-default-search-bar
+  .dumi-default-search-shortcut {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: rgb(28, 32, 34);
+}
+
+@media only screen and (max-width: 767px) {
+  .dumi-default-search-bar .dumi-default-search-shortcut {
+    display: none;
+  }
+}
+
+.dumi-default-search-bar .dumi-default-search-popover {
+  position: absolute;
+  top: 100%;
+  inset-inline-end: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  max-height: 460px;
+  margin-top: 18px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 30px;
+}
+
+[data-prefers-color="dark"]
+  .dumi-default-search-bar
+  .dumi-default-search-popover {
+  background-color: rgb(15, 22, 29);
+}
+
+.dumi-default-search-bar .dumi-default-search-popover::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  inset-inline-end: 100px;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent rgb(255, 255, 255);
+  border-image: initial;
+}
+
+[data-prefers-color="dark"]
+  .dumi-default-search-bar
+  .dumi-default-search-popover::before {
+  border-bottom-color: rgb(15, 22, 29);
+}
+
+.dumi-default-search-bar .dumi-default-search-popover > section {
+  flex: 1 1 0%;
+  min-height: 60px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-radius: inherit;
+}
+
+.dumi-default-search-bar .dumi-default-search-modal {
+  position: fixed;
+  top: 0px;
+  inset-inline-start: 0px;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.dumi-default-search-bar .dumi-default-search-modal-mask {
+  background-color: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+}
+
+.dumi-default-search-bar .dumi-default-search-modal-content {
+  position: absolute;
+  top: 60px;
+  background-color: rgb(255, 255, 255);
+  width: 500px;
+  padding: 12px;
+  box-sizing: border-box;
+  box-shadow:
+    rgba(255, 255, 255, 0.5) 1px 1px 0px 0px inset,
+    rgb(85, 90, 100) 0px 3px 8px 0px;
+  border-radius: 8px;
+  max-height: calc(100% - 120px);
+  display: flex;
+  flex-direction: column;
+}
+
+[data-prefers-color="dark"]
+  .dumi-default-search-bar
+  .dumi-default-search-modal-content {
+  background-color: rgb(15, 22, 29);
+}
+
+.dumi-default-search-bar
+  .dumi-default-search-modal
+  .dumi-default-search-bar-input {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.dumi-default-search-bar
+  .dumi-default-search-modal
+  .dumi-default-search-result {
+  min-height: 60px;
+  margin-top: 12px;
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+.dumi-default-search-bar
+  .dumi-default-search-modal
+  .dumi-default-search-result
+  > dl
+  > dd {
+  margin: 0px auto;
+}
+
+.dumi-default-search-bar .dumi-default-search-modal-commands {
+  justify-content: flex-start;
+  font-size: 12px;
+  color: rgb(138, 144, 153);
+  list-style: none;
+  padding: 12px 0px 0px;
+  margin: 0px;
+  border-top: 1px solid rgb(228, 233, 236);
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+[data-prefers-color="dark"]
+  .dumi-default-search-bar
+  .dumi-default-search-modal-commands {
+  color: rgb(97, 109, 127);
+  border-top-color: rgb(42, 53, 60);
+}
+
+.dumi-default-search-bar .dumi-default-search-modal-commands > li {
+  margin-inline-end: 10px;
+}
+
+.dumi-default-search-bar
+  .dumi-default-search-modal-commands-arrow
+  .dumi-default-search-modal-shortcut {
+  margin-inline-end: 4px;
+}
+
+.dumi-default-search-bar .dumi-default-search-modal-commands-text {
+  margin-inline-start: 5px;
+}
+
+.dumi-default-search-bar .dumi-default-search-modal-shortcut {
+  display: inline-block;
+  padding: 4px 8px;
+  color: rgb(138, 144, 153);
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  background-color: rgb(247, 249, 251);
+  border-radius: 3px;
+  border-width: 1px 1px 2px;
+  border-style: solid;
+  border-color: rgb(208, 213, 216);
+  border-image: initial;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+[data-prefers-color="dark"]
+  .dumi-default-search-bar
+  .dumi-default-search-modal-shortcut {
+  color: rgb(97, 109, 127);
+  background-color: rgb(5, 7, 9);
+  border-color: rgb(28, 32, 34);
+}

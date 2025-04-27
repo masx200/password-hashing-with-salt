@@ -8,7 +8,6 @@
  *
  * Learn more about Vite's preview command:
  * - https://vitejs.dev/config/preview-options.html#preview-options
- *
  */
 import { createQwikCity } from "@builder.io/qwik-city/middleware/node";
 import qwikCityPlan from "@qwik-city-plan";

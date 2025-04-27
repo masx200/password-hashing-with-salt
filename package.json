@@ -7,6 +7,9 @@
   "engines-annotation": "Mostly required by sharp which needs a Node-API v9 compatible runtime",
   "private": true,
   "type": "module",
+  "resolutions": {
+    "sharp": "0.32.6"
+  },
   "scripts": {
     "generate": "npm run build && npm run build.server",
     "build": "qwik build",
@@ -33,6 +36,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.0",
     "@mui/x-data-grid": "^6.4.0",
+    "@qwikdev/pwa": "^0.0.4",
     "@types/bootstrap": "^5",
     "@types/eslint": "8.56.10",
     "@types/lodash-es": "^4",
@@ -46,6 +50,7 @@
     "prettier": "3.3.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sharp": "0.32.6",
     "typescript": "5.4.5",
     "undici": "*",
     "vite": "5.3.5",

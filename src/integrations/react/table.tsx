@@ -29,4 +29,4 @@ const App: React.FC<{
   );
 };
 
-export default qwikify$(App, /* { eagerness: "hover" } */);
+export default qwikify$(App /* { eagerness: "hover" } */);
