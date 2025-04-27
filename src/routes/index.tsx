@@ -9,8 +9,50 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { debounce } from "lodash-es";
 import { hashPasswordWithSalt } from "../../hashPasswordWithSalt.ts";
 import { generate32BytePassword } from "../../generate32BytePassword.ts";
-import Table from "../integrations/react/table.tsx";
-import "antd/dist/reset.css"
+import Table, { DataType } from "../integrations/react/table.tsx";
+import "antd/dist/reset.css";
+import { TableProps } from "antd";
+
+const columns: TableProps<DataType>["columns"] = [
+  {
+    title: "Name",
+    dataIndex: "name",
+    key: "name",
+  },
+  {
+    title: "value",
+    dataIndex: "value",
+    key: "value",
+  },
+];
+
+const data: DataType[] = [
+  {
+    key: "1",
+    name: "John Brown",
+
+    value: "New York No. 1 Lake Park",
+  },
+  {
+    key: "2",
+    name: "Jim Green",
+
+    value: "London No. 1 Lake Park",
+  },
+  {
+    key: "1",
+    name: "John Brown",
+
+    value: "New York No. 1 Lake Park",
+  },
+  {
+    key: "2",
+    name: "Jim Green",
+
+    value: "London No. 1 Lake Park",
+  },
+];
+
 const generatePassworddebounced = debounce(async function (
   password: string,
   setpassword: (pass: string) => void,
@@ -321,8 +363,8 @@ export default component$(() => {
               Generate
             </button>
           </form>
-          <div id="result">
-            <Table />
+          <div id="result" class="ant-app css-var-«r6»">
+            <Table  columns={columns} dataSource={data} />
             <table
               class="table table-bordered border-primary"
               style="margin: 0 auto; border-collapse: collapse; width: 100%"

@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React from "react";
 import { Table } from "antd";
 import type { TableProps } from "antd";
@@ -6,52 +7,21 @@ import { qwikify$ } from "@builder.io/qwik-react";
 export interface DataType {
   key: string;
   name: string;
-  age: number;
-  address: string;
+  value: string;
 }
 
-const columns: TableProps<DataType>["columns"] = [
-  {
-    title: "Name",
-    dataIndex: "name",
-    key: "name",
-  },
-  {
-    title: "Age",
-    dataIndex: "age",
-    key: "age",
-  },
-  {
-    title: "Address",
-    dataIndex: "address",
-    key: "address",
-  },
-];
-
-const data: DataType[] = [
-  {
-    key: "1",
-    name: "John Brown",
-    age: 32,
-    address: "New York No. 1 Lake Park",
-  },
-  {
-    key: "2",
-    name: "Jim Green",
-    age: 42,
-    address: "London No. 1 Lake Park",
-  },
-  {
-    key: "3",
-    name: "Joe Black",
-    age: 32,
-    address: "Sydney No. 1 Lake Park",
-  },
-];
+//@ts-nocheck
 // @ts-ignore
-const App: React.FC = function () {
+const App: React.FC<{
+  columns: TableProps<DataType>["columns"];
+  dataSource: DataType[];
+}> = function (columns: TableProps<DataType>["columns"], dataSource: DataType[]) {
   // @ts-ignore
-  return <Table<DataType> columns={columns} dataSource={data} />;
+  return (
+    <div className="css-var-«r6» ant-table-css-var ant-table-wrapper">
+      <Table<DataType> columns={columns} dataSource={dataSource} />
+    </div>
+  );
 };
 
 export default qwikify$(App);

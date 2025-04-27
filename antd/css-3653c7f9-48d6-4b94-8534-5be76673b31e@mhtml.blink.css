@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+.ant-tag.ant-tag-blue { color: var(--ant-blue-7); background: var(--ant-blue-1); border-color: var(--ant-blue-3); }
+
+.ant-tag.ant-tag-blue-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-blue-6); border-color: var(--ant-blue-6); }
+
+.ant-tag.ant-tag-blue.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-purple { color: var(--ant-purple-7); background: var(--ant-purple-1); border-color: var(--ant-purple-3); }
+
+.ant-tag.ant-tag-purple-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-purple-6); border-color: var(--ant-purple-6); }
+
+.ant-tag.ant-tag-purple.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-cyan { color: var(--ant-cyan-7); background: var(--ant-cyan-1); border-color: var(--ant-cyan-3); }
+
+.ant-tag.ant-tag-cyan-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-cyan-6); border-color: var(--ant-cyan-6); }
+
+.ant-tag.ant-tag-cyan.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-green { color: var(--ant-green-7); background: var(--ant-green-1); border-color: var(--ant-green-3); }
+
+.ant-tag.ant-tag-green-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-green-6); border-color: var(--ant-green-6); }
+
+.ant-tag.ant-tag-green.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-magenta { color: var(--ant-magenta-7); background: var(--ant-magenta-1); border-color: var(--ant-magenta-3); }
+
+.ant-tag.ant-tag-magenta-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-magenta-6); border-color: var(--ant-magenta-6); }
+
+.ant-tag.ant-tag-magenta.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-pink { color: var(--ant-pink-7); background: var(--ant-pink-1); border-color: var(--ant-pink-3); }
+
+.ant-tag.ant-tag-pink-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-pink-6); border-color: var(--ant-pink-6); }
+
+.ant-tag.ant-tag-pink.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-red { color: var(--ant-red-7); background: var(--ant-red-1); border-color: var(--ant-red-3); }
+
+.ant-tag.ant-tag-red-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-red-6); border-color: var(--ant-red-6); }
+
+.ant-tag.ant-tag-red.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-orange { color: var(--ant-orange-7); background: var(--ant-orange-1); border-color: var(--ant-orange-3); }
+
+.ant-tag.ant-tag-orange-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-orange-6); border-color: var(--ant-orange-6); }
+
+.ant-tag.ant-tag-orange.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-yellow { color: var(--ant-yellow-7); background: var(--ant-yellow-1); border-color: var(--ant-yellow-3); }
+
+.ant-tag.ant-tag-yellow-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-yellow-6); border-color: var(--ant-yellow-6); }
+
+.ant-tag.ant-tag-yellow.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-volcano { color: var(--ant-volcano-7); background: var(--ant-volcano-1); border-color: var(--ant-volcano-3); }
+
+.ant-tag.ant-tag-volcano-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-volcano-6); border-color: var(--ant-volcano-6); }
+
+.ant-tag.ant-tag-volcano.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-geekblue { color: var(--ant-geekblue-7); background: var(--ant-geekblue-1); border-color: var(--ant-geekblue-3); }
+
+.ant-tag.ant-tag-geekblue-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-geekblue-6); border-color: var(--ant-geekblue-6); }
+
+.ant-tag.ant-tag-geekblue.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-lime { color: var(--ant-lime-7); background: var(--ant-lime-1); border-color: var(--ant-lime-3); }
+
+.ant-tag.ant-tag-lime-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-lime-6); border-color: var(--ant-lime-6); }
+
+.ant-tag.ant-tag-lime.ant-tag-borderless { border-color: transparent; }
+
+.ant-tag.ant-tag-gold { color: var(--ant-gold-7); background: var(--ant-gold-1); border-color: var(--ant-gold-3); }
+
+.ant-tag.ant-tag-gold-inverse { color: var(--ant-color-text-light-solid); background: var(--ant-gold-6); border-color: var(--ant-gold-6); }
+
+.ant-tag.ant-tag-gold.ant-tag-borderless { border-color: transparent; }

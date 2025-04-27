@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.ant-app { font-family: var(--ant-font-family); font-size: var(--ant-font-size); box-sizing: border-box; }
+
+.ant-app::before, .ant-app::after { box-sizing: border-box; }
+
+.ant-app [class^="ant-app"], .ant-app [class*=" ant-app"] { box-sizing: border-box; }
+
+.ant-app [class^="ant-app"]::before, .ant-app [class*=" ant-app"]::before, .ant-app [class^="ant-app"]::after, .ant-app [class*=" ant-app"]::after { box-sizing: border-box; }
+
+.ant-app { color: var(--ant-color-text); font-size: var(--ant-font-size); line-height: var(--ant-line-height); font-family: var(--ant-font-family); }
+
+.ant-app.ant-app-rtl { direction: rtl; }
