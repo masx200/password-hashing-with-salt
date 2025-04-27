@@ -1,6 +1,7 @@
 import {
   $,
   component$,
+  Signal,
   useComputed$,
   useSignal,
   useTask$,
@@ -12,46 +13,6 @@ import { generate32BytePassword } from "../../generate32BytePassword.ts";
 import Table, { DataType } from "../integrations/react/table.tsx";
 import "antd/dist/reset.css";
 import { TableProps } from "antd";
-
-const columns: TableProps<DataType>["columns"] = [
-  {
-    title: "Name",
-    dataIndex: "name",
-    key: "name",
-  },
-  {
-    title: "value",
-    dataIndex: "value",
-    key: "value",
-  },
-];
-
-const data: DataType[] = [
-  {
-    key: "1",
-    name: "John Brown",
-
-    value: "New York No. 1 Lake Park",
-  },
-  {
-    key: "2",
-    name: "Jim Green",
-
-    value: "London No. 1 Lake Park",
-  },
-  {
-    key: "1",
-    name: "John Brown",
-
-    value: "New York No. 1 Lake Park",
-  },
-  {
-    key: "2",
-    name: "Jim Green",
-
-    value: "London No. 1 Lake Park",
-  },
-];
 
 const generatePassworddebounced = debounce(async function (
   password: string,
@@ -116,6 +77,19 @@ const debouncedGenerateHash = debounce(async function (
   }
 });
 export default component$(() => {
+  const columns: TableProps<DataType>["columns"] = [
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+    },
+    {
+      title: "value",
+      dataIndex: "value",
+      key: "value",
+    },
+  ];
+
   const hashref = useSignal("");
   const saltref = useSignal("");
   const password = useSignal(() => generate32BytePassword(15));
@@ -210,6 +184,33 @@ export default component$(() => {
       );
     }
   });
+  const datasource: Signal<DataType[]> = useComputed$(() => [
+    {
+      key: "1",
+      name: "Algorithm",
+
+      value: algorithmref.value,
+    },
+    {
+      key: "2",
+      name: "Password",
+
+      value: password.value,
+    },
+    {
+      key: "3",
+      name: "Salt",
+
+      value: saltref.value,
+    },
+    {
+      key: "4",
+      name: "Hash",
+
+      value: hashref.value,
+    },
+  ]);
+  console.log(columns, datasource.value);
   return (
     <>
       <div
@@ -224,7 +225,7 @@ export default component$(() => {
       "
       >
         <img
-          style="opacity: 0.7"
+          style="opacity: 0.8"
           width={250}
           height={150}
           src="./v2-1247d1214f9f61d8cb4ad7ad63bbc3d2_1440w.jpg"
@@ -234,7 +235,7 @@ export default component$(() => {
 
         <div
           style="
-          opacity: 0.8;
+          opacity: 0.9;
           margin: 0;
           background-color: white;
           width: 100%;
@@ -364,8 +365,8 @@ export default component$(() => {
             </button>
           </form>
           <div id="result" class="ant-app css-var-«r6»">
-            <Table  columns={columns} dataSource={data} />
-            <table
+            <Table columns={columns} dataSource={datasource.value} />
+            {/* <table
               class="table table-bordered border-primary"
               style="margin: 0 auto; border-collapse: collapse; width: 100%"
             >
@@ -401,7 +402,7 @@ export default component$(() => {
                   <td id="hash-table">{hashref.value}</td>
                 </tr>
               </tbody>
-            </table>
+            </table> */}
           </div>
         </div>
       </div>

@@ -15,7 +15,12 @@ export interface DataType {
 const App: React.FC<{
   columns: TableProps<DataType>["columns"];
   dataSource: DataType[];
-}> = function (columns: TableProps<DataType>["columns"], dataSource: DataType[]) {
+}> = function (props: {
+  columns: TableProps<DataType>["columns"];
+  dataSource: DataType[];
+}) {
+  const { columns, dataSource } = props;
+  console.log(columns, dataSource);
   // @ts-ignore
   return (
     <div className="css-var-«r6» ant-table-css-var ant-table-wrapper">
@@ -24,4 +29,4 @@ const App: React.FC<{
   );
 };
 
-export default qwikify$(App);
+export default qwikify$(App, /* { eagerness: "hover" } */);
