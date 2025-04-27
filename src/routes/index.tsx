@@ -1,7 +1,7 @@
 import {
   $,
   component$,
-  Signal,
+ type Signal,
   useComputed$,
   useSignal,
   useTask$,
@@ -10,7 +10,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { debounce } from "lodash-es";
 import { hashPasswordWithSalt } from "../../hashPasswordWithSalt.ts";
 import { generate32BytePassword } from "../../generate32BytePassword.ts";
-import Table, { DataType } from "../integrations/react/table.tsx";
+import Table, {type DataType } from "../integrations/react/table.tsx";
 import "antd/dist/reset.css";
 import { TableProps } from "antd";
 

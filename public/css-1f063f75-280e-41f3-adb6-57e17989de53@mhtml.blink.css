@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+[data-tts-block-id].tts-active { background: rgba(206, 225, 255, 0.9) !important; }
+
+[data-tts-sentence-id].tts-active { background: rgba(0, 89, 191, 0.7) !important; }
