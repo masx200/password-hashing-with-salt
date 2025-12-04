@@ -22,7 +22,7 @@ const generatePassworddebounced = debounce(async function (
   setalgorithm: (algorithm: string) => void,
   // setpassword: (pass: string) => void,
   settablesalt: (salt: string) => void,
-  passlength: number
+  passlength: number,
 ) {
   password = generate32BytePassword(passlength);
   setpassword(password);
@@ -34,7 +34,7 @@ const generatePassworddebounced = debounce(async function (
     setalgorithm,
     // setpassword,
     settablesalt,
-    passlength
+    passlength,
   );
 });
 const debouncedGenerateHash = debounce(async function (
@@ -45,7 +45,7 @@ const debouncedGenerateHash = debounce(async function (
   setalgorithm: (algorithm: string) => void,
   // setpassword: (pass: string) => void,
   settablesalt: (salt: string) => void,
-  passlength: number
+  passlength: number,
 ) {
   //@ts-ignore
 
@@ -58,8 +58,11 @@ const debouncedGenerateHash = debounce(async function (
   try {
     const result = await hashPasswordWithSalt(password, {
       algorithm,
-      saltlength:
-        "SHA-384" == algorithm ? 48 : "SHA-256" == algorithm ? 32 : 64,
+      saltlength: "SHA-384" == algorithm
+        ? 48
+        : "SHA-256" == algorithm
+        ? 32
+        : 64,
     });
 
     sethash(result.hash);
@@ -125,7 +128,7 @@ export default component$(() => {
       (salt) => {
         saltref.value = salt;
       },
-      passlength.value
+      passlength.value,
     );
   });
   const passdecrement = $(async function () {
@@ -137,7 +140,8 @@ export default component$(() => {
     e.preventDefault();
   });
 
-  const buttonClick = $(async function () { navigator.serviceWorker
+  const buttonClick = $(async function () {
+    navigator.serviceWorker
       .register("/sw.js", { scope: "/" })
       .then(console.log, console.error);
     await debouncedGenerateHash(
@@ -158,7 +162,7 @@ export default component$(() => {
       (salt) => {
         saltref.value = salt;
       },
-      passlength.value
+      passlength.value,
     );
   });
   useTask$(async ({ track }) => {
@@ -190,7 +194,7 @@ export default component$(() => {
         (salt) => {
           saltref.value = salt;
         },
-        passlengthrefvalue
+        passlengthrefvalue,
       );
     }
   });
@@ -218,7 +222,7 @@ export default component$(() => {
         (salt) => {
           saltref.value = salt;
         },
-        passlength.value
+        passlength.value,
       );
     }
   });
@@ -251,8 +255,7 @@ export default component$(() => {
   console.log(columns, datasource.value);
   return (
     <>
-      <div
-        style="
+      <div style="
         display: flex;
         width: 100%;
         flex-direction: column;
@@ -260,8 +263,7 @@ export default component$(() => {
         align-content: center;
         justify-content: center;
         align-items: center;
-      "
-      >
+      ">
         <img
           style="opacity: 0.8"
           width={250}
@@ -271,8 +273,7 @@ export default component$(() => {
           alt="哈希算法"
         />
 
-        <div
-          style="
+        <div style="
           opacity: 0.9;
           margin: 0;
           background-color: white;
@@ -282,8 +283,7 @@ export default component$(() => {
           align-items: center;
           justify-content: center;
           padding: auto;
-        "
-        >
+        ">
           <h1 class="mb-3 fw-semibold lh-1">Password Hashing Tool</h1>
 
           <form
@@ -352,7 +352,8 @@ export default component$(() => {
                         <div
                           id="slider-border-part"
                           style={`--slider-border-part-width: ${percent.value}%`}
-                        ></div>
+                        >
+                        </div>
                       </div>
                       <button
                         preventdefault:click
@@ -404,7 +405,8 @@ export default component$(() => {
           </form>
           <div id="result" class="ant-app css-var-«r6»">
             <Table columns={columns} dataSource={datasource.value} />
-            {/* <table
+            {
+              /* <table
               class="table table-bordered border-primary"
               style="margin: 0 auto; border-collapse: collapse; width: 100%"
             >
@@ -440,7 +442,8 @@ export default component$(() => {
                   <td id="hash-table">{hashref.value}</td>
                 </tr>
               </tbody>
-            </table> */}
+            </table> */
+            }
           </div>
         </div>
       </div>

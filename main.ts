@@ -93,3 +93,21 @@ document.addEventListener(
   },
   { once: true },
 );
+if ("serviceWorker" in navigator) {
+  window.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      navigator.serviceWorker.register("/sw.js", { scope: "/" });
+    },
+    { once: true },
+  );
+}
+if ("serviceWorker" in navigator) {
+  window.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      navigator.serviceWorker.register("/service-worker.js", { scope: "/" });
+    },
+    { once: true },
+  );
+}

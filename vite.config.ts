@@ -30,7 +30,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
       drop: isdrop ? ["console", "debugger"] : undefined,
     },
     plugins: [
-      VitePWA({ registerType: "autoUpdate" ,   injectRegister: 'auto',}),
+      VitePWA({ registerType: "autoUpdate", injectRegister: "auto" }),
       qwikCity(),
       qwikVite(),
       tsconfigPaths(),
