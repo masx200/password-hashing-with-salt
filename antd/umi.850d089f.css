@@ -144,12 +144,7 @@ code[class*="language-"], pre[class*="language-"] {
   background: rgb(250, 250, 250);
   color: rgb(56, 58, 66);
   font-family:
-    "Fira Code",
-    "Fira Mono",
-    Menlo,
-    Consolas,
-    "DejaVu Sans Mono",
-    monospace;
+    "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;

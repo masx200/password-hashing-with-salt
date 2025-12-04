@@ -12,7 +12,7 @@ import { hashPasswordWithSalt } from "../../hashPasswordWithSalt.ts";
 import { generate32BytePassword } from "../../generate32BytePassword.ts";
 import Table, { type DataType } from "../integrations/react/table.tsx";
 import "antd/dist/reset.css";
-import { TableProps } from "antd";
+import type { TableProps } from "antd";
 
 const generatePassworddebounced = debounce(async function (
   password: string,
@@ -163,10 +163,12 @@ export default component$(() => {
     const algorithmrefvalue = track(() => algorithmref.value);
 
     const passlengthrefvalue = track(() => passlength.value);
-   
+
     const passwordrefvalue = track(() => password.value);
-/* 在密码长度变化时自动重新生成 */
-    if (passlengthrefvalue > 0&&passlengthrefvalue!=passwordrefvalue.length) {
+    /* 在密码长度变化时自动重新生成 */
+    if (
+      passlengthrefvalue > 0 && passlengthrefvalue != passwordrefvalue.length
+    ) {
       await generatePassworddebounced(
         password.value,
         (pass) => {
@@ -185,16 +187,15 @@ export default component$(() => {
         (salt) => {
           saltref.value = salt;
         },
-        passlengthrefvalue
+        passlengthrefvalue,
       );
     }
   });
   useTask$(async ({ track }) => {
     const algorithmrefvalue = track(() => algorithmref.value);
 
-  
     const passwordrefvalue = track(() => password.value);
-/* 在密码长度变化时自动重新生成 */
+    /* 在密码长度变化时自动重新生成 */
     if (password.value.length > 0) {
       await debouncedGenerateHash(
         passwordrefvalue,
