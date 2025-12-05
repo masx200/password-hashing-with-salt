@@ -9,6 +9,7 @@
  */
 //eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 navigator.serviceWorker
+  //eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   ?.register("/sw.js", { scope: "/" })
   .then(console.log, console.error);
 import { setupServiceWorker } from "@builder.io/qwik-city/service-worker";

@@ -453,6 +453,14 @@ export default component$(() => {
 
 export const head: DocumentHead = {
   title: "Password Hashing with Salt",
+  scripts: [
+    {
+      props: {
+        src: "/registerSW.js",
+        type: "module",
+      },
+    },
+  ],
   meta: [
     {
       name: "description",
