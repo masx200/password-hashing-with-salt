@@ -8,6 +8,7 @@ import { RouterHead } from "./components/router-head/router-head";
 import { isDev } from "@builder.io/qwik";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./global.css";
+import { useEffect } from "react";
 
 export default component$(() => {
   /**
@@ -16,7 +17,13 @@ export default component$(() => {
    *
    * Don't remove the `<head>` and `<body>` elements.
    */
-
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js", { scope: "/" });
+      });
+    }
+  }, []);
   return (
     <QwikCityProvider>
       <head>
@@ -52,12 +59,10 @@ export default component$(() => {
           href="./random-password-generator.css"
           type="text/css"
         />
-        {
-          /* <link
+        {/* <link
           rel="stylesheet"
           href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
-        /> */
-        }
+        /> */}
 
         <link
           rel="stylesheet"
@@ -183,13 +188,8 @@ export default component$(() => {
           rel="stylesheet"
           type="text/css"
           href="./antd/css-bf7b8d4c-6e4c-471a-a91a-4a7467bdbc82@mhtml.blink.css"
-        >
-        </link>
-        <link
-          rel="stylesheet"
-          href="./antd/umi.850d089f.css"
-        >
-        </link>
+        ></link>
+        <link rel="stylesheet" href="./antd/umi.850d089f.css"></link>
         <link
           rel="stylesheet"
           type="text/css"
@@ -199,8 +199,7 @@ export default component$(() => {
           rel="stylesheet"
           type="text/css"
           href="./antd/vendors_0-async.e96b29bd.css"
-        >
-        </link>
+        ></link>
       </head>
       <body
         lang="en"
