@@ -42,3 +42,4 @@ lerna-debug.log*
 !.yarn/releases
 .pnp.cjs
 .pnp.loader.mjs
+.claude/settings.local.json
