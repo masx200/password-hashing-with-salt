@@ -11,7 +11,7 @@
     "sharp": "0.32.6"
   },
   "scripts": {
-    "generate": "npm run build && npm run build.server",
+    "generate": "npm run build && npm run build.server && node fix-service-worker.js",
     "build": "qwik build",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
