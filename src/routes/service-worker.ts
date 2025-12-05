@@ -7,9 +7,9 @@
  * Qwik uses a service worker to speed up your site and reduce latency, ie, not used in the traditional way of offline.
  * You can also use this file to add more functionality that runs in the service worker.
  */
-
+//eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 navigator.serviceWorker
-  .register("/sw.js", { scope: "/" })
+  ?.register("/sw.js", { scope: "/" })
   .then(console.log, console.error);
 import { setupServiceWorker } from "@builder.io/qwik-city/service-worker";
 import { setupPwa } from "@qwikdev/pwa/sw";

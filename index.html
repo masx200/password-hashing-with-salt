@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" href="./style.css" />
@@ -37,7 +37,15 @@
 
   <body class="tmpl-www mod-zh-cn first-menu-for-home navigation-for-desktop">
     <div
-      style="display: flex; width: 100%; flex-direction: column; flex-wrap: nowrap; align-content: center; justify-content: center; align-items: center"
+      style="
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+      "
     >
       <img
         style="opacity: 0.7"
@@ -49,13 +57,31 @@
       />
 
       <div
-        style="opacity: 0.8; margin: 0; background-color: white; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: auto"
+        style="
+          opacity: 0.8;
+          margin: 0;
+          background-color: white;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: auto;
+        "
       >
         <h1 class="mb-3 fw-semibold lh-1">Password Hashing Tool</h1>
 
         <form
           id="form"
-          style="display: flex; flex-direction: column; gap: 15px; width: 100%; justify-content: center; align-content: center; align-items: stretch"
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            justify-content: center;
+            align-content: center;
+            align-items: stretch;
+          "
         >
           <label>
             <span style="text-align: center"><strong>Password:</strong></span>
@@ -69,9 +95,11 @@
                     <label
                       for="length"
                       class="first body-1 mb-16 mb-lg-0 me-lg-16 me-xl-48"
-                    ><span>密码长度</span>:
+                      ><span>密码长度</span>:
                       <span class="ms-8 ms-lg-16 fw-bold body-2"
-                      >15</span></label>
+                        >15</span
+                      ></label
+                    >
                   </div>
                   <div class="slider-settings">
                     <button
@@ -85,17 +113,18 @@
                         min="1"
                         max="50"
                         class="slider"
-                        style="background: linear-gradient(
-  90deg,
-  transparent 28.5714%,
-  rgb(0, 112, 246) 28.6714%
-)"
+                        style="
+                          background: linear-gradient(
+                            90deg,
+                            transparent 28.5714%,
+                            rgb(0, 112, 246) 28.6714%
+                          );
+                        "
                       />
                       <div
                         id="slider-border-part"
                         style="--slider-border-part-width: 28.571428571428573%"
-                      >
-                      </div>
+                      ></div>
                     </div>
                     <button
                       class="button-circle outline size-md theme-dark shadow-none ms-12"
@@ -163,9 +192,9 @@
         window.addEventListener(
           "DOMContentLoaded",
           () => {
-            navigator.serviceWorker.register("/sw.js", { scope: "/" });
+            navigator.serviceWorker?.register("/sw.js", { scope: "/" });
           },
-          { once: true },
+          { once: true }
         );
       }
     </script>
@@ -175,11 +204,11 @@
         window.addEventListener(
           "DOMContentLoaded",
           () => {
-            navigator.serviceWorker.register("/service-worker.js", {
+            navigator.serviceWorker?.register("/service-worker.js", {
               scope: "/",
             });
           },
-          { once: true },
+          { once: true }
         );
       }
     </script>
